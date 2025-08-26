@@ -1,6 +1,8 @@
 <template>
   <header>
-    <img src="Bilder/tlou1.png" alt="The Last of Us" width="300" />
+    <NuxtLink to="/">
+      <img src="/Bilder/tlou1.png" alt="The Last of Us" width="300" />
+    </NuxtLink>
     <nav>
       <NuxtLink to="/">The Last of Us</NuxtLink>
       <NuxtLink to="/ueber">About The Game</NuxtLink>

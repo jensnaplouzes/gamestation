@@ -1,6 +1,5 @@
 <template>
   <div class="thelastofus">
-    <Header />
     <main>
       <h2 id="inhalt">Welcome to The Last of Us Universe</h2>
       <h3><strong>A world where survival means sacrifice.</strong></h3>
@@ -18,11 +17,11 @@
         <NuxtLink to="/charaktere" class="button">Meet the Characters</NuxtLink>
       </section>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script setup>
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
+definePageMeta({
+  bodyClass: 'thelastofus',
+});
 </script>

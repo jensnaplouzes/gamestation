@@ -4,23 +4,32 @@ body {
   padding: 0;
   background-color: #1a1a1a;
   color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1, h2, h3 {
   text-shadow: 2px 2px 10px #000000;
 }
 
-ul {
-  background-color: #1f1f1f;
-  padding: 15px;
-  border-left: 4px solid #c05030;
-  border-radius: 4px;
-  list-style-type: square;
-}
-
 a {
   text-decoration: none;
   font-weight: bold;
+  color: inherit;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #ffffff;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff0000;
+  transform: scale(1.1);
 }
 
 header {
@@ -36,18 +45,6 @@ footer {
   padding: 15px;
   color: #888;
   border-top: 2px solid #444;
-}
-
-nav a {
-  margin: 0 20px;
-  color: #ffffff;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px #ff0000;
-  transform: scale(1.1);
 }
 
 main {
@@ -67,22 +64,12 @@ main {
   }
 }
 
-body.thelastofus { background-image: url('Bilder/blackwhite.jpg'); }
-body.ueberseite { background-image: url('Bilder/ellie0.jpg'); }
-body.charaktere { background-image: url('Bilder/tlou.world.jpg'); }
-body.infected { background-image: url('Bilder/charaktere.jpg'); }
-body.fireflies { background-image: url('Bilder/fireflies.png'); }
-body.fedra { background-image: url('Bilder/fedra.png'); }
-body.wlf { background-image: url('Bilder/wolves.jpg'); }
-body.scars { background-image: url('Bilder/scars.jpg'); }
-body.hbo { background-image: url('Bilder/hbo.infected.webp'); }
-body.contact { background-image: url('Bilder/kontakte.webp'); }
-
-body {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+ul {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-left: 4px solid #c05030;
+  border-radius: 4px;
+  list-style-type: square;
 }
 
 .infected-section,
