@@ -7,7 +7,7 @@
           <div class="charaktere-text">
             <h3>Joel</h3>
             <p>
-              Joel is a hardened survivor shaped by tragedy and loss.<br />
+              Joel is a hardened survivor shaped by tragedy and loss..<br />
               <br />
               Before the outbreak, he was a loving father and a simple man,
               living a quiet life in Texas. However, after losing his daughter
