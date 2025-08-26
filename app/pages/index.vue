@@ -25,3 +25,9 @@ definePageMeta({
   bodyClass: 'thelastofus',
 });
 </script>
+
+<style>
+body.index {
+  background-image: url('/Bilder/blackwhite.jpg');
+}
+</style>

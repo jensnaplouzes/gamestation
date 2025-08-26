@@ -8,14 +8,10 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  bodyClass: 'hbo',
-});
-</script>
+<script setup></script>
 
 <style>
-body {
+body.hbo {
   background-image: url('/Bilder/hbo.infected.webp');
 }
 </style>

@@ -21,14 +21,10 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  bodyClass: 'infected',
-});
-</script>
+<script setup></script>
 
 <style>
-body {
+body.infected {
   background-image: url('/Bilder/tlou.world.jpg');
 }
 </style>

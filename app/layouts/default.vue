@@ -26,7 +26,6 @@ const setBodyClass = () => {
 onMounted(() => {
   setBodyClass();
 });
-
 watch(
   () => route.name,
   () => {
@@ -34,3 +33,9 @@ watch(
   }
 );
 </script>
+<style scoped>
+.layout-default {
+  display: flex;
+  flex-direction: column;
+}
+</style>

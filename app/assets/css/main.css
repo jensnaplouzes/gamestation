@@ -10,6 +10,10 @@ body {
   background-attachment: fixed;
 }
 
+html, body, #__nuxt, .layout-default{
+  min-height: 100vh;
+}
+
 h1, h2, h3 {
   text-shadow: 2px 2px 10px #000000;
 }
@@ -72,12 +76,24 @@ ul {
   list-style-type: square;
 }
 
+.charaktere-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .infected-section,
 .charaktere-section {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
-  margin-bottom: 60px;
+}
+
+.infected-section > div,
+.charaktere-section > div {
+  max-width: 70%;
 }
 
 .infected-img,
