@@ -1,0 +1,118 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+h1, h2, h3 {
+  text-shadow: 2px 2px 10px #000000;
+}
+
+ul {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-left: 4px solid #c05030;
+  border-radius: 4px;
+  list-style-type: square;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  background-color: #2a2a2a;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #444;
+}
+
+footer {
+  text-align: center;
+  background-color: #2a2a2a;
+  padding: 15px;
+  color: #888;
+  border-top: 2px solid #444;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #ffffff;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff0000;
+  transform: scale(1.1);
+}
+
+main {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.thelastofus { background-image: url('Bilder/blackwhite.jpg'); }
+body.ueberseite { background-image: url('Bilder/ellie0.jpg'); }
+body.charaktere { background-image: url('Bilder/tlou.world.jpg'); }
+body.infected { background-image: url('Bilder/charaktere.jpg'); }
+body.fireflies { background-image: url('Bilder/fireflies.png'); }
+body.fedra { background-image: url('Bilder/fedra.png'); }
+body.wlf { background-image: url('Bilder/wolves.jpg'); }
+body.scars { background-image: url('Bilder/scars.jpg'); }
+body.hbo { background-image: url('Bilder/hbo.infected.webp'); }
+body.contact { background-image: url('Bilder/kontakte.webp'); }
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.infected-section,
+.charaktere-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.infected-img,
+.charaktere-img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-with-sticker {
+  display: flex;
+  align-items: flex-start;
+  gap: 800px;
+}
+
+.text-with-sticker p {
+  flex: 1;
+  margin: 0;
+}
+
+.sticker {
+  width: 170px;
+  height: auto;
+}
