@@ -8,14 +8,4 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  bodyClass: 'fedra',
-});
-</script>
-
-<style>
-body {
-  background-image: url('/Bilder/fedra.png');
-}
-</style>
+<script setup></script>

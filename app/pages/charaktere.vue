@@ -1,17 +1,24 @@
 <template>
-  <div class="charaktere">
+  <div
+    id="characters"
+    class="relative h-full bg-[url('/Bilder/tlou.world.jpg')] bg-cover bg-center bg-fixed bg-no-repeat"
+  >
     <main>
-      <h2 id="inhalt">The Last Of Us Charaktere</h2>
+      <h1
+        class="text-4xl font-bold mb-10 text-center text-white drop-shadow-lg"
+      >
+        The Last Of Us Team
+      </h1>
       <div class="charaktere-wrapper">
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Joel</h3>
-            <p>
-              Joel is a hardened survivor shaped by tragedy and loss..<br />
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Joel</h3>
+            <p class="leading-relaxed space-y-4">
+              Joel is a hardened survivor shaped by tragedy and loss.<br />
               <br />
               Before the outbreak, he was a loving father and a simple man,
               living a quiet life in Texas. However, after losing his daughter
-              during the chaos of the infection’s spread, Joel became
+              during the chaos of the infection's spread, Joel became
               emotionally closed off, relying on survival instincts to make it
               through the brutal new world. He is strong, resourceful, and
               ruthless when needed, often forced to make morally complex
@@ -24,20 +31,24 @@
               his humanity while grappling with the consequences of his past.
             </p>
           </div>
-          <img src="/Bilder/joel1.webp" alt="Joel" width="200" />
+          <img
+            src="/Bilder/joel1.webp"
+            alt="Joel"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Ellie</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Ellie</h3>
+            <p class="leading-relaxed space-y-4">
               Ellie is a brave, witty, and determined young girl born into a
               world ravaged by infection.<br />
               <br />
               She grew up without knowing the world before the outbreak, and her
               survival has been shaped by violence, trauma, and perseverance.<br />
               What makes her unique is her immunity to the Cordyceps infection,
-              making her humanity’s last hope for a cure.<br />
+              making her humanity's last hope for a cure.<br />
               <br />
               Over time, Ellie transforms from a curious teenager into a capable
               and fierce fighter, deeply shaped by her bond with Joel and the
@@ -49,21 +60,50 @@
               love, and what it means to survive.
             </p>
           </div>
-          <img src="/Bilder/ellie3.png" alt="Ellie" width="200" />
+          <img
+            src="/Bilder/ellie3.png"
+            alt="Ellie"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Abby</h3>
-            <p>Abby is a strong, determined, and polarizing character...</p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Abby</h3>
+            <p class="leading-relaxed space-y-4">
+              Abby is a strong, determined, and polarizing character introduced
+              in the Last Of Us Part II<br />
+              A former Firefly turned soldier for the Washington Liberation
+              Front (WLF).
+            </p>
+            <p class="leading-relaxed space-y-4">
+              Abby is driven by a deep desire for revenge following the death of
+              her father.<br />
+              Her physical strength and combat skills make her a formidable
+              force, but underneath lies a person dealing with immense grief and
+              moral conflict.
+            </p>
+            <p class="leading-relaxed space-y-4">
+              Throughout the game, players witness Abby's growth as she learns
+              to question her motivations<br />
+              and seek redemption in a world filled with endless violence.<br />
+              Her journey challenges players to see beyond black-and-white
+              morality,<br />
+              adding complexity to the narrative and humanizing a chatacter many
+              saw only as an enemy.
+            </p>
           </div>
-          <img src="/Bilder/abby.webp" alt="Abby" width="200" />
+          <img
+            src="/Bilder/abby.webp"
+            alt="Abby"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Marlene</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Marlene</h3>
+            <p class="leading-relaxed space-y-4">
               Marlene is the determined and principled leader of the Fireflies,
               a revolutionary militia fighting against the oppressive military
               regime of FEDRA. She is fiercely devoted to the cause of restoring
@@ -80,13 +120,17 @@
               deeply tied to the fate of the series.
             </p>
           </div>
-          <img src="/Bilder/marlene.png" alt="Marlene" width="250" />
+          <img
+            src="/Bilder/marlene.png"
+            alt="Marlene"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Tommy</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Tommy</h3>
+            <p class="leading-relaxed space-y-4">
               Tommy is Joel’s younger brother and a former soldier, whose sense
               of morality and hope sets him apart in the bleak world of The Last
               of Us. Unlike Joel, Tommy believes in rebuilding society and seeks
@@ -105,13 +149,17 @@
               emotional depth of the story.
             </p>
           </div>
-          <img src="/Bilder/tommy1.webp" alt="Tommy" width="200" />
+          <img
+            src="/Bilder/tommy1.webp"
+            alt="Tommy"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Dina</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Dina</h3>
+            <p class="leading-relaxed space-y-4">
               Dina is Ellie’s close companion and love interest in "The Last of
               Us Part II". She’s compassionate, witty, and emotionally open,
               offering Ellie a sense of hope and normalcy in a broken world.<br />
@@ -129,13 +177,17 @@
               — if she chooses to let go of revenge.
             </p>
           </div>
-          <img src="/Bilder/dina.webp" alt="Dina" width="200" />
+          <img
+            src="/Bilder/dina.webp"
+            alt="Dina"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Lev</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Lev</h3>
+            <p class="leading-relaxed space-y-4">
               Lev is a courageous and compassionate teenager introduced in The
               Last of Us Part II.<br />
               Born into the religious Seraphite cult, Lev was assigned female at
@@ -154,13 +206,17 @@
               narrative, highlighting themes of family, freedom, and belonging.
             </p>
           </div>
-          <img src="/Bilder/lev.webp" alt="Lev" width="200" />
+          <img
+            src="/Bilder/lev.webp"
+            alt="Lev"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Jesse</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Jesse</h3>
+            <p class="leading-relaxed space-y-4">
               Jesse is a loyal and dependable member of the Jackson community,
               and one of Ellie’s closest friends in "The Last of Us Part II".<br />
               Calm, level-headed, and pragmatic, Jesse often acts as a voice of
@@ -177,13 +233,17 @@
               communities like Jackson together in a harsh, unforgiving world.
             </p>
           </div>
-          <img src="/Bilder/jesse.webp" alt="Jesse" width="200" />
+          <img
+            src="/Bilder/jesse.webp"
+            alt="Jesse"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Owen</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Owen</h3>
+            <p class="leading-relaxed space-y-4">
               Owen is a former Firefly and a member of the WLF, known for his
               kind heart and inner conflict amidst the brutality around him.<br />
               Unlike many others in the post-apocalyptic world, Owen dreams of
@@ -203,13 +263,17 @@
               hold on to hope and the possibility of a different future.
             </p>
           </div>
-          <img src="/Bilder/owen.webp" alt="Owen" width="200" />
+          <img
+            src="/Bilder/owen.webp"
+            alt="Owen"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Nora</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Nora</h3>
+            <p class="leading-relaxed space-y-4">
               Nora is a former Firefly and a dedicated member of the WLF,
               working as a field medic and often assisting on missions.<br />
               She is intelligent, composed, and shows a deep sense of loyalty to
@@ -227,13 +291,17 @@
               regret and fear beneath the surface.
             </p>
           </div>
-          <img src="/Bilder/nora.webp" alt="Nora" width="200" />
+          <img
+            src="/Bilder/nora.webp"
+            alt="Nora"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
 
-        <div class="charaktere-section">
-          <div class="charaktere-text">
-            <h3>Maria</h3>
-            <p>
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Maria</h3>
+            <p class="leading-relaxed space-y-4">
               Maria is the strong and respected leader of the Jackson community.
               She is Tommy’s wife and plays a crucial role in maintaining peace
               and order.<br />
@@ -249,21 +317,28 @@
               in a world devastated by the outbreak.
             </p>
           </div>
-          <img src="/Bilder/maria.webp" alt="Maria" width="200" />
+          <img
+            src="/Bilder/maria.webp"
+            alt="Maria"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-start gap-10">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">Sara</h3>
+            <p class="leading-relaxed space-y-4"></p>
+          </div>
+          <img
+            src="/Bilder/sara.png"
+            alt="Maria"
+            class="w-[200px] rounded-lg shadow-lg"
+          />
         </div>
       </div>
+      <p><NuxtLink to="#charakters">Back to top ↑</NuxtLink></p>
     </main>
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  bodyClass: 'charaktere',
-});
-</script>
-
-<style>
-body {
-  background-image: url('/Bilder/tlou.world.jpg');
-}
-</style>
+<script setup></script>

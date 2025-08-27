@@ -4,6 +4,11 @@
     <main>
       <slot />
     </main>
+    <button class="scroll-up" @click="scrollToTop">
+      &#8593;
+      <span class="sr-only">Nach oben</span>
+    </button>
+
     <Footer />
   </div>
 </template>
@@ -32,10 +37,23 @@ watch(
     setBodyClass();
   }
 );
+const scrollToTop = (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 </script>
 <style scoped>
+@reference "../assets/css/main.css";
 .layout-default {
   display: flex;
   flex-direction: column;
+}
+
+.scroll-up {
+  @apply fixed z-50 right-4 bottom-8 w-12 h-12 rounded-2xl opacity-90 transition-all duration-300 ease-in-out cursor-pointer hover:bottom-10 hover:opacity-100;
+  @apply bg-red-500/60 text-white text-lg font-extrabold hover:bg-red-500;
 }
 </style>

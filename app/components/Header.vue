@@ -17,3 +17,9 @@
     </nav>
   </header>
 </template>
+<style scoped>
+@reference "../assets/css/main.css";
+header {
+  @apply flex justify-center flex-col items-center gap-8;
+}
+</style>

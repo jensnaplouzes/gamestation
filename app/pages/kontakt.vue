@@ -1,40 +1,57 @@
 <template>
-  <div class="kontaktseite">
-    <main>
-      <h2 id="kontaktformular">Kontaktformular</h2>
+  <div
+    class="min-h-screen bg-[url('/Bilder/kontakte.webp')] bg-cover bg-center text-white flex items-center"
+  >
+    <main class="max-w-3xl mx-auto p-8 bg-black/60 rounded-md">
+      <h2 class="text-3xl font-bold mb-4">Contact Form</h2>
       <p>
-        Schreib uns eine Nachricht, wenn du Fragen hast oder Feedback geben
-        möchtest!
+        Send us a message if you have any questions or would like to give us
+        feedback!
       </p>
-      <div class="text-with-sticker">
-        <form action="#" method="post">
-          <label for="name">Name:</label><br />
-          <input type="text" id="name" name="name" required /><br /><br />
-          <label for="email">E-Mail:</label><br />
-          <input type="email" id="email" name="email" required /><br /><br />
-          <label for="nachricht">Nachricht:</label><br />
-          <textarea id="nachricht" name="nachricht" rows="5" required></textarea
-          ><br /><br />
-          <button type="submit">Absenden</button>
+      <br></br>
+      <br></br>
+      <div class="flex flex-col md:flex-row md:items-start gap-6">
+        <form class="flex-1 space-y-4">
+          <label class="block mb-1" for="name">Name:</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            class="w-full p-2 rounded bg-gray-700 focus:ring-2 focus:ring-red-500"
+          /><br />
+          <label class="block mb-1" for="email">E-Mail:</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            class="w-full p-2 rounded bg-gray-700 focus:ring-2 focus:ring-red-500"
+          /><br />
+          <label class="block mb-1" for="nachricht">Message:</label>
+          <textarea
+            id="nachricht"
+            name="nachricht"
+            rows="5"
+            required
+            class="w-full p-2 rounded bg-gray-700 focus:ring-2 focus:ring-red-500"
+          ></textarea>
+          <br /><br />
+          <button
+            type="submit"
+            class="button-primary"
+          >
+            Send
+          </button>
         </form>
         <img
           src="/Bilder/clicker.boss.png"
           alt="Clicker Boss"
-          class="sticker"
+          class="sticker w-40 rounded-lg shadow-lg"
         />
       </div>
     </main>
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  bodyClass: 'kontakt',
-});
-</script>
-
-<style>
-body {
-  background-image: url('/Bilder/kontakte.webp');
-}
-</style>
+<script setup></script>

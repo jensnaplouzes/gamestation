@@ -1,17 +1,17 @@
 <template>
-  <div class="hbo">
-    <main>
-      <h2 id="inhalt">The Last of Us – HBO</h2>
-      <h3>From game to screen — a story reborn with even more heart...</h3>
-      <p>The HBO series The Last of Us brings the beloved game to life...</p>
+  <div
+    class="min-h-screen bg-[url('/Bilder/hbo.infected.webp')] bg-cover bg-center text-white"
+  >
+    <main class="max-w-4xl mx-auto p-8">
+      <h2 class="text-3xl font-bold mb-4">The Last of Us – HBO</h2>
+      <h3 class="text-xl mb-2">
+        From game to screen — a story reborn with even more heart...
+      </h3>
+      <p class="text-base leading-relaxed">
+        The HBO series The Last of Us brings the beloved game to life...
+      </p>
     </main>
   </div>
 </template>
 
 <script setup></script>
-
-<style>
-body.hbo {
-  background-image: url('/Bilder/hbo.infected.webp');
-}
-</style>
