@@ -1,10 +1,4 @@
 <template>
-  <div
-    class="relative h-screen bg-[url('/Bilder/blackwhite.jpg')] bg-cover bg-center text-white overflow-auto"
-  >
-    <div class="absolute top-0 left-0 w-screen h-screen bg-black/50 z-0"></div>
-
-    <main class="relative z-10 w-full p-8 space-y-6">
       <h1 class="text-4xl font-bold">Enter The Last of Us Zone</h1>
       <h2 class="text-2xl">Trust no one. Fear Everything.</h2>
       <h3 class="text-xl italic">A world where survival means sacrifice.</h3>
@@ -52,8 +46,6 @@
           The Last Faces Of Hope
         </NuxtLink>
       </section>
-    </main>
-  </div>
 </template>
 
 <script setup></script>

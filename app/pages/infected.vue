@@ -1,199 +1,230 @@
 <template>
-  <div
-    id="infected"
-    class="min-h-screen bg-[url('/Bilder/tlou.world.jpg')] bg-cover bg-center text-white p-8 space-y-12"
-  >
-    <main>
-      <h2 class="text-3xl font-bold">Types Of Infected:</h2>
+  <div id="infected" class="space-y-12">
+    <h2 class="text-5xl text-center font-bold">Stages of Infection:</h2>
+    <blockquote
+      class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4 max-w-xl mx-auto"
+    >
+      They were human once.
+    </blockquote>
+
+    <Infected title="Runnrs" image="/Bilder/runners.webp">
+      Runners are the earliest stage of infection — humans recently overtaken by
+      the cordyceps fungus, but still fast, agile, and incredibly aggressive.<br />
       <br />
+      Though their minds are mostly gone, traces of instinct and rage remain,
+      driving them to swarm their prey relentlessly.<br />
+      Their speed and pack mentality make them a constant threat, especially in
+      open or tight urban environments where they can quickly overwhelm
+      survivors.<br />
+      <br />
+      These infected represent the initial transformation phase, where the human
+      body has been radically altered but retains much of its physical
+      capabilities.<br />
+      Runners move with alarming speed and erratic, unpredictable behavior that
+      makes them difficult to evade or confront directly.<br />
+      Despite losing most of their higher cognitive functions, fragments of
+      their former instincts fuel an unending hunger and a violent drive to
+      attack anything that moves.<br />
+      <br />
+      Their relentless aggression is coupled with a frightening pack
+      mentality.<br />
+      They hunt in groups, coordinating attacks through sheer numbers rather
+      than strategy.<br />
+      <br />
+      This swarm behavior allows them to corner and overpower even well-armed
+      survivors, especially in environments<br />
+      like cramped city streets,abandoned buildings, or open spaces where escape
+      routes are limited.
+      <br />
+      Survivors caught in the midst of a Runner pack must remain calm, cautious,
+      and quick-thinking.<br />
+      Every moment counts when these infected close in with terrifying speed.<br />
+      <br />
+      The Runners embody the terrifying fusion of human agility and primal
+      ferocity,<br />
+      making them one of the deadliest threats in the post-apocalyptic world of
+      The Last of Us.
+    </Infected>
 
-      <div class="space-y-12">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="md:w-2/3 space-y-4">
-            <h3 class="text-7xl font-semibold">Runners</h3>
-            <p class="leading-relaxed">
-              Runners are the earliest stage of infection — humans recently
-              overtaken by the cordyceps fungus, but still fast, agile, and
-              incredibly aggressive.<br />
-              They move in erratic, unpredictable bursts, attacking anything
-              that moves with feral intensity.
-            </p>
-            <p>
-              Though their minds are mostly gone, traces of instinct and rage
-              remain, driving them to swarm their prey relentlessly.<br />
-              Their speed and pack mentality make them a constant threat,
-              especially in open or tight urban environments where they can
-              quickly overwhelm survivors. While individually weaker than later
-              stages, their numbers and aggression demand caution and strategic
-              avoidance..
-            </p>
-          </div>
-          <img
-            src="/Bilder/runners.webp"
-            alt="Runners"
-            class="w-3/4 md:w-1/4 rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
+    <Infected title="Stalkers" image="/Bilder/stalkers.webp">
+      Stalkers represent a middle stage of infection — more stealthy and
+      calculated than runners, but not yet fully transformed like clickers.<br />
+      They occupy a dangerous in-between phase where the infected retain some
+      human cunning alongside the brutal aggression of the fungus.<br />
+      This makes them uniquely threatening, as they combine stealth, patience,
+      and sudden bursts of violence.<br />
+      <br />
+      They blend into the shadows of ruined buildings and alleyways, stalking
+      their victims patiently and silently.<br />
+      Unlike the frantic speed of runners, stalkers use careful observation and
+      cunning tactics to ambush survivors.<br />
+      <br />
+      Their movements are deliberate and quiet, allowing them to disappear into
+      the environment and strike unexpectedly.<br />
+      This makes them especially dangerous in urban environments full of hiding
+      places and obstacles.<br />
+      <br />
+      Their ability to ambush with sudden violence makes them terrifying.
+      Encountering a stalker means you're being hunted.<br />
+      They wait for the perfect moment to attack — catching survivors off guard,
+      striking with lethal precision.<br />
+      <br />
+      Unlike the indiscriminate aggression of runners, stalkers demonstrate a
+      cold, predatory intelligence, making every encounter a tense game of cat
+      and mouse.<br />
+      <br />
+      Survivors must stay vigilant and constantly aware of their surroundings to
+      avoid falling victim to these deadly predators.<br />
+      Stalkers can disappear into the shadows at a moment's notice, making it
+      essential to listen for subtle audio cues and watch for faint
+      movements.<br />
+      Their presence turns even the quietest streets into a deadly trap.
+    </Infected>
 
-      <div class="space-y-12">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="md:w-2/3 space-y-4">
-            <h3 class="text-7xl font-semibold">Stalkerss</h3>
-            <p>
-              The stalker represents a middle stage of infection — more stealthy
-              and calculated than runners but not yet fully transformed like
-              clickers.
-            </p>
-            <p>
-              They blend into the shadows of ruined buildings, overgrown
-              forests, and debris-strewn alleyways, stalking their victims
-              patiently and silently.
-            </p>
-            <p>
-              Stalkers are cunning hunters, using the environment to their
-              advantage to ambush survivors with sudden bursts of violence.
-              Their ability to move quietly and strike unexpectedly makes them
-              terrifying predators, forcing players to stay alert and avoid
-              being cornered.<br />
-              Encountering a stalker means you're being hunted.
-            </p>
-          </div>
-          <img
-            src="/Bilder/stalkers.webp"
-            alt="Stalkers"
-            class="w-3/4 md:w-1/4 rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
+    <Infected title="Clickers" image="/Bilder/clicker.png" class="!w-1/5">
+      Clickers are a grotesque evolution of the fungal infection — completely
+      blind, their eyes consumed by thick fungal plates that have overtaken
+      their faces.<br />
+      <br />
+      This advanced stage of infection transforms the host into a nightmarish
+      creature, more monster than human.<br />
+      The fungal growth has hardened into armor-like formations, making them
+      extremely tough and difficult to kill.<br />
+      <br />
+      Since they are completely blind, Clickers rely on echolocation to navigate
+      their environment.<br />
+      They produce their signature clicking sounds, which bounce off surfaces
+      and help them “see” through sound.<br />
+      These clicks serve as a terrifying warning to anyone nearby, signaling
+      that death is close.<br />
+      <br />
+      The eerie clicking noises echo through abandoned buildings and dark
+      corridors, striking fear into survivors before the attack even begins.<br />
+      <br />
+      Despite their blindness, Clickers have an acute sense of hearing and
+      smell, allowing them to detect the faintest movements or scents of
+      prey.<br />
+      Their agility and strength, combined with a brutal, savage attack style,
+      make them lethal opponents.<br />
+      <br />
+      A single strike from a Clicker's powerful claw or bite can kill instantly
+      or cause devastating injuries.<br />
+      Their hulking, grotesque appearance and relentless aggression make
+      Clickers one of the most feared threats in the post-apocalyptic world.<br />
+      <br />
+      Survivors must approach with extreme caution, using stealth and strategy
+      to avoid drawing attention — for once a Clicker locks onto a target, there
+      is little chance of escape.<br />
+      They are not just infected — they are a chilling embodiment of what the
+      world has become.<br />
+      Every twitch of their body, every sharp burst of their clicking echo,
+      serves as a haunting reminder that humanity is no longer the dominant
+      force.<br />
+      <br />
+      Where once there were voices, now there are only the sounds of fungus
+      feeding on flesh and instincts turned into weapons.<br />
+      To face a Clicker is to stare into the abyss of nature's cruel adaptation
+      — relentless, blind, and grotesquely efficient.<br />
+      Survivors know: in the presence of a Clicker, even a single breath could
+      be your last.
+    </Infected>
 
-      <div class="space-y-12">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="md:w-2/3 space-y-4">
-            <h3 class="text-7xl font-semibold">Clickers</h3>
-            <p>
-              Clickers are a grotesque evolution in the fungal infection —
-              completely blind, their eyes consumed by thick fungal plates, they
-              rely on echolocation clicks to navigate and hunt.
-            </p>
-            <p>
-              Their signature clicking sound is both a terrifying warning and a
-              death knell for anyone nearby.<br />
-              Despite their blindness, clickers have an acute sense of hearing
-              and smell, making stealth and silence crucial for survival.<br />
-              When they close in, their brutal strength and razor-sharp fungal
-              claws can kill instantly.
-            </p>
-            <p>
-              They often lurk in dark, abandoned spaces, making their presence a
-              constant source of dread. Fighting a clicker head-on is dangerous
-              and often deadly.
-            </p>
-          </div>
-          <img
-            src="/Bilder/clicker.png"
-            alt="Clickers"
-            class="w-3/4 md:w-1/6 rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
+    <Infected title="Bloater" image="/Bilder/bloater.png">
+      Bloaters are massive, heavily armored infected covered in thick fungal
+      plates that act like natural armor.<br />
+      These fungal growths have hardened over time, turning their bodies into
+      near-impenetrable fortresses.<br />
+      <br />
+      Their grotesque appearance makes it clear they have endured the infection
+      for far longer than other infected types, evolving into hulking behemoths
+      of destruction.<br />
+      <br />
+      Although they move slowly, Bloaters possess terrifying strength.<br />
+      Their sheer physical power allows them to crush bones, tear through
+      obstacles, and obliterate anything in their path with devastating
+      blows.<br />
+      Their heavy footsteps and slow lumbering gait are often the last thing
+      survivors hear before a deadly attack.<br />
+      <br />
+      Adding to their danger, Bloaters can release clouds of toxic spores from
+      their fungal growths.<br />
+      These spores are highly poisonous and can choke, disorient, and weaken
+      anyone caught nearby, making close combat even more hazardous.<br />
+      <br />
+      The spores linger in the air, forcing survivors to keep their distance or
+      risk being overwhelmed by the toxic miasma.<br />
+      <br />
+      Rare but extremely dangerous, Bloaters are best avoided whenever
+      possible.<br />
+      When avoidance is not an option, heavy firepower and careful strategy are
+      essential to bring them down.<br />
+      <br />
+      Their thick fungal armor can withstand most small arms fire, so
+      explosives, molotovs, or powerful firearms are usually required to defeat
+      these monstrous infected.
+    </Infected>
 
-      <div class="space-y-12">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="md:w-2/3 space-y-4">
-            <h3 class="text-7xl font-semibold">Bloaters</h3>
-            <p>
-              Bloaters are the nightmare made flesh — massive, heavily armored
-              infected covered in thick fungal plates that act like natural
-              armor.
-            </p>
-            <p>
-              They move slowly but with terrifying power, able to crush bones
-              and smash through obstacles with ease.<br />
-              Their fungal growth also releases toxic spores that can choke and
-              poison anyone nearby, turning even proximity into a threat.
-            </p>
-            <p>
-              Bloaters are rare but extremely dangerous, requiring careful
-              tactics, strong weapons, and sometimes pure luck to survive
-              encounters with them.<br />
-              Their presence signals a severe threat and often forces survivors
-              to avoid combat at all costs.
-            </p>
-          </div>
-          <img
-            src="/Bilder/bloater.png"
-            alt="Bloaters"
-            class="w-3/4 md:w-1/4 rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
+    <Infected title="Shambler" image="/Bilder/shamblers.webp">
+      Shamblers emerge after heavy rain or storms, their bodies swollen with
+      pulsating, glowing fungal growths that secrete a toxic mist.<br />
+      These infected represent a later and even more hazardous stage of the
+      cordyceps infection, thriving in damp environments where the fungus
+      flourishes.<br />
+      <br />
+      The glowing fungal sacs on their bodies release burning spore clouds
+      whenever they are disturbed or attacked, turning any close-range encounter
+      into a deadly toxic zone.<br />
+      <br />
+      Despite their slow and lumbering movements, Shamblers are incredibly
+      dangerous due to the constant threat of their toxic spores.<br />
+      When provoked, they unleash these noxious clouds that can cause severe
+      burns, respiratory damage, and disorientation, weakening survivors and
+      leaving them vulnerable to follow-up attacks.<br />
+      <br />
+      Their size and glowing fungal growths make them difficult to sneak up on,
+      but survivors must still exercise extreme caution.<br />
+      Maintaining distance is critical, as getting too close means risking
+      exposure to the toxic spore clouds that linger in the air.<br />
+      <br />
+      Using ranged weapons and quick reflexes is the best strategy for dealing
+      with Shamblers, allowing survivors to strike from afar without triggering
+      their deadly spores.<br />
+      <br />
+      In the post-apocalyptic world, Shamblers embody the evolving and
+      unpredictable nature of the cordyceps infection,<br />
+      forcing survivors to adapt constantly or face devastating consequences.
+    </Infected>
 
-      <div class="space-y-12">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="md:w-2/3 space-y-4">
-            <h3 class="text-7xl font-semibold">Shamblers</h3>
-            <p>
-              Shamblers emerge after heavy rain or storms, swollen with dark,
-              glowing fungal growths that release clouds of corrosive, burning
-              spores when disturbed or attacked.
-            </p>
-            <p>
-              They lumber forward with heavy, deliberate steps, their bodies
-              grotesquely bloated and dripping with infectious material.<br />
-              Shamblers are deadly not just because of their strength, but
-              because their spores can cause serious damage over time, affecting
-              both health and visibility.
-            </p>
-            <p>
-              Their attacks spread toxic clouds that linger in the environment,
-              turning battles into hazardous zones. Survivors must use ranged
-              weapons and quick reflexes to keep their distance and avoid being
-              overwhelmed.
-            </p>
-          </div>
-          <img
-            src="/Bilder/shambler.jpg"
-            alt="Shamblers"
-            class="w-3/4 md:w-1/4 rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-12">
-        <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <div class="md:w-2/3 space-y-4">
-            <h3 class="text-7xl font-semibold">Rat King</h3>
-            <p>
-              The Rat King is a horrifying and unique infection — a tangled mass
-              of multiple infected bodies fused together by relentless fungal
-              growth.
-            </p>
-            <p>
-              This abomination has multiple limbs, heads, and minds, all
-              fighting for control but functioning as one monstrous entity.<br />
-              It's slower than other infected but incredibly resilient and
-              unpredictable, capable of devastating attacks that combine brute
-              strength, spore clouds, and grappling limbs.
-            </p>
-            <p>
-              The Rat King's grotesque form represents the darkest consequences
-              of the fungal outbreak, embodying chaos, pain, and endless
-              hunger.<br />
-              Facing it is often a nightmare scenario, requiring teamwork,
-              courage, and strategy to survive.
-            </p>
-          </div>
-          <img
-            src="/Bilder/ratking.webp"
-            alt="Rat King"
-            class="w-3/4 md:w-1/4 rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-
-      <p><NuxtLink to="#infected">Back to top ↑</NuxtLink></p>
-    </main>
+    <Infected title="Rat King" image="/Bilder/ratking.webp">
+      The Rat King is a horrifying fusion of multiple infected bodies,
+      grotesquely fused together by relentless and invasive fungal growth.<br />
+      <br />
+      This nightmarish creature is a tangled mass of limbs, heads, and fungal
+      tissue, creating a monstrous amalgamation that defies natural order.<br />
+      Unlike any other infected, the Rat King moves with a terrifying
+      unpredictability, its many heads and limbs acting in unison yet with
+      chaotic, wild coordination.<br />
+      It possesses immense brute strength, able to crush and grapple survivors
+      with overwhelming force.<br />
+      <br />
+      The Rat King's fungal body continuously emits toxic spore clouds, adding
+      another deadly layer to its arsenal.<br />
+      These spores can burn, choke, and weaken anyone unfortunate enough to be
+      caught nearby, making close combat a hazardous endeavor.<br />
+      <br />
+      Fighting the Rat King is a nightmare scenario — a brutal test of survival,
+      courage, and quick thinking.<br />
+      Its sheer size and unpredictability force survivors to adapt constantly,
+      combining strategy with raw determination to stand a chance.<br />
+      <br />
+      Each encounter with the Rat King is a desperate struggle, where victory
+      often hinges on using the environment wisely and exploiting every weakness
+      in the creature's monstrous form.<br />
+      <br />
+      In the world of The Last of Us, the Rat King stands as a terrifying symbol
+      of the cordyceps fungus's relentless evolution and the horrific fate that
+      awaits those infected.
+    </Infected>
   </div>
 </template>
 

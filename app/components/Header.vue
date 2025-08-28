@@ -16,6 +16,7 @@
       <NuxtLink to="/kontakt">Contact</NuxtLink>
     </nav>
   </header>
+  <div class="scroll-trigger"></div>
 </template>
 <style scoped>
 @reference "../assets/css/main.css";

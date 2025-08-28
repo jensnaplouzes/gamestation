@@ -1,6 +1,6 @@
 <template>
-  <div id="story" class="relative h-screen bg-[url('/Bilder/ellie0.jpg')] bg-cover bg-center text-white p-8">
-    <main>
+  <div id="story">
+
       <h2 class="text-3xl font-bold">The Story 🎮</h2>
       <br></br>
             <img src="/Bilder/tloupart1.png" alt="The Last of Us - Part I" width="300" /><br></br>
@@ -9,16 +9,16 @@
         <strong>deadly fungal infection</strong> that turns people into agressive, zombie-like creatures.<br></br>
         The world has collapsed into quarantined cities, isolated settlements, and dangerous wilderness. The game follows <strong>Joel Miller</strong>, a hardened survivor who tragically lost his daughter on the first night of the outbreak.
       </p>
-      <p>Twenty years later, he's tasked with smugling a teenage girl named <strong>Ellie</strong> out of a quarantine zone. <strong>Ellie is immune to the infection and may be the key to a cure.</strong></p>
-      <p>Over their dangerous jorney, Joel and Ellie form a deep <strong>father-daughter bond.</strong> But when Joel discovers that saving humanity means losing Ellie,<br></br>
+      <p>Twenty years later, he's tasked with smuggling a teenage girl named <strong>Ellie</strong> out of a quarantine zone. <strong>Ellie is immune to the infection and may be the key to a cure.</strong></p>
+      <p>Over their dangerous journey, Joel and Ellie form a deep <strong>father-daughter bond.</strong> But when Joel discovers that saving humanity means losing Ellie,<br></br>
       he makes a devastating choice to save her instead.</p>
       <br></br>
       <br></br>
       <img src="/Bilder/tloupart2.png" alt="The Last of Us - Part II" width="300" /><br></br>
       <p>Five years later, Joel and Ellie live in a safe community in Jackson, Wyoming.</p>
-      <p>Their peace is shattered when a woman named <strong>Abby</strong>, seeking revenge fot her father's death, brutally kills Joel.</p>
+      <p>Their peace is shattered when a woman named <strong>Abby</strong>, seeking revenge for her father's death, brutally kills Joel.</p>
       <p>Consumed by grief and rage, Ellie hunts Abby across a ruined Seattle, driven by revenge. Along the way, the game also tells Abby's side of the story, showing how violence and loss shape both women.</p>
-      <p>In the end, Ellie realizes thet revenge has cost her everything, and she choose to let Abby live.<br></br>
+      <p>In the end, Ellie realizes that revenge has cost her everything, and she chooses to let Abby live.<br></br>
       breaking the cycle of violence but <strong>losing herself in the process.</strong></p>
       <br></br>
       <br></br>
@@ -43,9 +43,6 @@
           </tr>
         </tbody>
       </table>
-
-      <p><NuxtLink to="#story" class="block mt-4 text-center">Back to top ↑</NuxtLink></p>
-    </main>
   </div>
 </template>
 
@@ -71,7 +68,7 @@ const features = [
   },
   {
     title:'🧠 Strategy',
-    description: 'Use you environment, resources, and instincts to outsmart enemies.',
+    description: 'Use your environment, resources, and instincts to outsmart enemies.',
   },
   {
     title:'🎯 Precision',

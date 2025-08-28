@@ -1,343 +1,314 @@
 <template>
-  <div
-    id="characters"
-    class="relative h-full bg-[url('/Bilder/tlou.world.jpg')] bg-cover bg-center bg-fixed bg-no-repeat"
-  >
-    <main>
-      <h1
-        class="text-4xl font-bold mb-10 text-center text-white drop-shadow-lg"
-      >
-        The Last Of Us Team
-      </h1>
-      <div class="charaktere-wrapper">
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Joel</h3>
-            <p class="leading-relaxed space-y-4">
-              Joel is a hardened survivor shaped by tragedy and loss.<br />
-              <br />
-              Before the outbreak, he was a loving father and a simple man,
-              living a quiet life in Texas. However, after losing his daughter
-              during the chaos of the infection's spread, Joel became
-              emotionally closed off, relying on survival instincts to make it
-              through the brutal new world. He is strong, resourceful, and
-              ruthless when needed, often forced to make morally complex
-              decisions.<br />
-              <br />
-              Despite his hardened exterior, Joel slowly forms a deep, fatherly
-              bond with Ellie, whom he is tasked with protecting on a dangerous
-              journey across the country. His relationship with Ellie becomes
-              the emotional heart of the story, challenging him to rediscover
-              his humanity while grappling with the consequences of his past.
-            </p>
-          </div>
-          <img
-            src="/Bilder/joel1.webp"
-            alt="Joel"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+  <div id="characters">
+    <h1 class="text-5xl font-bold mb-10 text-center text-white drop-shadow-lg">
+      Voices from the Outbreak
+    </h1>
+    <blockquote
+      class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4 max-w-xl mx-auto"
+    >
+      The Survivors of a Broken World
+    </blockquote>
+    <br />
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Ellie</h3>
-            <p class="leading-relaxed space-y-4">
-              Ellie is a brave, witty, and determined young girl born into a
-              world ravaged by infection.<br />
-              <br />
-              She grew up without knowing the world before the outbreak, and her
-              survival has been shaped by violence, trauma, and perseverance.<br />
-              What makes her unique is her immunity to the Cordyceps infection,
-              making her humanity's last hope for a cure.<br />
-              <br />
-              Over time, Ellie transforms from a curious teenager into a capable
-              and fierce fighter, deeply shaped by her bond with Joel and the
-              losses she experiences.<br />
-              <br />
-              She is complex, carrying both immense strength and emotional
-              vulnerability.<br />
-              Her story in both games explores themes of identity, revenge,
-              love, and what it means to survive.
-            </p>
-          </div>
-          <img
-            src="/Bilder/ellie3.png"
-            alt="Ellie"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Joel" image="/Bilder/joel1.webp">
+      Joel is a man shaped by pain, loss, and the harsh realities of a broken
+      world. Before the infection, he lived a simple, quiet life in Texas with
+      his daughter Sarah.<br />
+      They shared dreams and love, but everything changed when the fungal
+      outbreak hit.<br />
+      <br />In the chaos, Joel lost Sarah, a wound that left him broken
+      inside.<br />
+      From that moment, he became emotionally closed off and hardened by the
+      need to survive.<br />
+      <br />
+      The new world is cruel, and Joel quickly learned to rely only on
+      himself.<br />
+      He is strong, resourceful, and ruthless when necessary.<br />
+      His survival instincts help him through dangerous encounters with infected
+      creatures and hostile humans.<br />
+      <br />
+      Despite this, Joel isn't heartless. When he meets Ellie, a girl immune to
+      the infection, something changes in him. He becomes her protector and,
+      over time, her surrogate father.<br />
+      <br />
+      Their journey is full of dangers, but it also brings back Joel's lost
+      humanity.<br />
+      His bond with Ellie forces him to confront his past and care for someone
+      again, even in a world where hope feels scarce.<br />
+      <br />
+      Joel's story is one of survival, loss, and rediscovery — proving that even
+      in darkness, human connection can light the way.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Abby</h3>
-            <p class="leading-relaxed space-y-4">
-              Abby is a strong, determined, and polarizing character introduced
-              in the Last Of Us Part II<br />
-              A former Firefly turned soldier for the Washington Liberation
-              Front (WLF).
-            </p>
-            <p class="leading-relaxed space-y-4">
-              Abby is driven by a deep desire for revenge following the death of
-              her father.<br />
-              Her physical strength and combat skills make her a formidable
-              force, but underneath lies a person dealing with immense grief and
-              moral conflict.
-            </p>
-            <p class="leading-relaxed space-y-4">
-              Throughout the game, players witness Abby's growth as she learns
-              to question her motivations<br />
-              and seek redemption in a world filled with endless violence.<br />
-              Her journey challenges players to see beyond black-and-white
-              morality,<br />
-              adding complexity to the narrative and humanizing a chatacter many
-              saw only as an enemy.
-            </p>
-          </div>
-          <img
-            src="/Bilder/abby.webp"
-            alt="Abby"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Ellie" image="/Bilder/ellie3.png">
+      Ellie was born into a world devastated by the infection and has never
+      known life before the outbreak.<br />
+      She grew up surrounded by violence and loss but developed a strong will
+      and fierce determination to survive.<br />
+      <br />
+      What makes Ellie special is her immunity to the fungal infection, which
+      makes her humanity's last hope for a cure.<br />
+      Though young, Ellie has had to grow up fast. She is brave, quick-witted,
+      and skilled at defending herself.<br />
+      <br />
+      Her life is shaped by trauma, but she still carries a spark of hope and
+      curiosity about the world.<br />
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Marlene</h3>
-            <p class="leading-relaxed space-y-4">
-              Marlene is the determined and principled leader of the Fireflies,
-              a revolutionary militia fighting against the oppressive military
-              regime of FEDRA. She is fiercely devoted to the cause of restoring
-              freedom and hope to the world,<br />
-              even if it means making difficult and morally complex choices.<br />
-              <br />
-              Marlene played a crucial role in Ellie’s life, acting as a
-              guardian figure and ultimately making the decision to place her
-              under Joel's care. Her commitment to finding a cure for the
-              infection drives many of her actions, even when those actions
-              carry heavy consequences. Torn between personal bonds and the
-              greater good, Marlene’s character embodies the painful sacrifices
-              demanded by a broken world. Her presence is powerful, tragic, and
-              deeply tied to the fate of the series.
-            </p>
-          </div>
-          <img
-            src="/Bilder/marlene.png"
-            alt="Marlene"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+      <br />Ellie's journey is about much more than survival — it's about
+      identity, trust, and the struggle to find meaning in a harsh, broken
+      world.<br />
+      Her relationship with Joel shapes much of her story.<br />
+      Together, they face dangers and heartbreak, and Ellie learns to balance
+      strength with vulnerability.<br />
+      <br />
+      Over time, Ellie becomes a fierce fighter but also a deeply emotional
+      person, wrestling with loss, love, and what it means to be human in a
+      world that seems to have lost its humanity.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Tommy</h3>
-            <p class="leading-relaxed space-y-4">
-              Tommy is Joel’s younger brother and a former soldier, whose sense
-              of morality and hope sets him apart in the bleak world of The Last
-              of Us. Unlike Joel, Tommy believes in rebuilding society and seeks
-              a better future through community and trust.<br />
-              He is a founding member of the Jackson settlement, a safe haven
-              where people work together to survive with dignity and purpose.<br />
-              <br />
-              Though loyal to Joel, Tommy often struggles with his brother’s
-              brutal methods and emotional detachment.<br />
-              Their relationship is layered with love, tension, and shared
-              trauma.<br />
-              Tommy’s journey is marked by his desire for peace, but he's also
-              pulled into the cycle of violence when personal loss tests his
-              ideals.<br />
-              As both a brother and a leader, Tommy plays a key role in the
-              emotional depth of the story.
-            </p>
-          </div>
-          <img
-            src="/Bilder/tommy1.webp"
-            alt="Tommy"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Abby" image="/Bilder/abby.webp">
+      Abby is a strong and determined woman shaped by grief and a desire for
+      justice.<br />
+      Introduced in The Last of Us Part II, she starts as a soldier for the
+      Washington Liberation Front (WLF), a group fighting for control in a
+      fractured world. Abby's life is driven by revenge after the death of her
+      father, which pushes her into brutal battles.<br />
+      <br />
+      Despite her tough exterior, Abby's story is one of growth and struggle. As
+      players follow her, they see her question her motivations and search for
+      meaning beyond violence.<br />
+      <br />
+      Abby is physically powerful and skilled in combat, but underneath she
+      wrestles with her own pain and the moral complexity of the world she lives
+      in.<br />
+      <br />
+      Her journey challenges players to see beyond simple good and evil, showing
+      that people are shaped by their choices, losses, and hopes for
+      redemption.<br />
+      <br />
+      Abby's story is about finding humanity even in a world filled with endless
+      conflict.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Dina</h3>
-            <p class="leading-relaxed space-y-4">
-              Dina is Ellie’s close companion and love interest in "The Last of
-              Us Part II". She’s compassionate, witty, and emotionally open,
-              offering Ellie a sense of hope and normalcy in a broken world.<br />
-              <br />
-              Dina grew up in a religious family and is no stranger to
-              hardship,<br />
-              but her strength comes from her deep empathy and fierce loyalty to
-              those she loves.<br />
-              <br />
-              As Ellie’s partner, Dina supports her through incredibly difficult
-              moments, even while carrying the burden of her own pregnancy. Her
-              presence adds emotional depth and warmth to the story, contrasting
-              the violence and darkness that surround them.<br />
-              Dina represents what Ellie could have — peace, love, and a future
-              — if she chooses to let go of revenge.
-            </p>
-          </div>
-          <img
-            src="/Bilder/dina.webp"
-            alt="Dina"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Marlene" image="/Bilder/marlene.png">
+      Marlene is the determined leader of the Fireflies, a resistance group
+      fighting against the oppressive military regime FEDRA.<br />
+      She is passionate and principled, committed to restoring freedom and hope
+      in a world torn apart by infection and violence.<br />
+      Marlene's leadership is marked by difficult decisions, often involving
+      sacrifices for the greater good.<br />
+      <br />
+      She plays a crucial role in Ellie's life, acting as a protector and
+      ultimately entrusting Ellie to Joel's care to keep her safe.<br />
+      <br />
+      Marlene's goal is to find a cure for the infection, and her actions are
+      motivated by this hope, even if it means making painful choices.<br />
+      Her character represents the complexity of leadership in desperate times —
+      balancing loyalty, hope, and harsh realities.<br />
+      <br />
+      Marlene is a symbol of resistance and the painful costs of fighting for a
+      better future.<br />
+      <br />
+      Her story is tragic but filled with purpose, highlighting the sacrifices
+      needed to protect humanity.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Lev</h3>
-            <p class="leading-relaxed space-y-4">
-              Lev is a courageous and compassionate teenager introduced in The
-              Last of Us Part II.<br />
-              Born into the religious Seraphite cult, Lev was assigned female at
-              birth but identifies as male, facing persecution from his
-              community because of his identity.<br />
-              <br />
-              After escaping the oppressive beliefs of the Seraphites, Lev
-              becomes a loyal companion to Abby, forming a deep bond based on
-              trust, survival, and shared pain. He is agile, skilled with a bow,
-              and remarkably mature for his age, often offering a calm
-              perspective in moments of chaos.<br />
-              <br />
-              Lev’s journey is one of self-acceptance and bravery, challenging
-              societal norms and showing that identity and resilience go hand in
-              hand. His story adds emotional depth and representation to the
-              narrative, highlighting themes of family, freedom, and belonging.
-            </p>
-          </div>
-          <img
-            src="/Bilder/lev.webp"
-            alt="Lev"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Tommy" image="/Bilder/tommy1.webp">
+      Tommy is Joel's younger brother.<br />
+      He used to be a soldier but now helps run a safe town called Jackson.
+      Unlike Joel, Tommy still believes people can rebuild their lives and
+      create a better future.<br />
+      He cares about his brother, but sometimes he disagrees with Joel's harsh
+      ways.<br />
+      <br />
+      Tommy wants to live in a place where people help each other, not just
+      fight to survive.<br />
+      His hope and kindness make him a different kind of survivor.<br />
+      <br />
+      Tommy's story is about trying to find peace and protect the people he
+      loves, even when the world around them is full of danger.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Jesse</h3>
-            <p class="leading-relaxed space-y-4">
-              Jesse is a loyal and dependable member of the Jackson community,
-              and one of Ellie’s closest friends in "The Last of Us Part II".<br />
-              Calm, level-headed, and pragmatic, Jesse often acts as a voice of
-              reason during tense moments. He deeply cares for his friends and
-              is willing to put himself in danger to protect them.<br />
-              <br />
-              Despite the emotional complexities between him, Ellie, and Dina,
-              Jesse never lets personal issues interfere with his sense of duty
-              and moral compass.<br />
-              His bravery and selflessness leave a lasting impact, even though
-              his time in the story is tragically cut short.<br />
-              <br />
-              Jesse represents the kind of quiet strength and loyalty that keeps
-              communities like Jackson together in a harsh, unforgiving world.
-            </p>
-          </div>
-          <img
-            src="/Bilder/jesse.webp"
-            alt="Jesse"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Dina" image="/Bilder/dina.webp">
+      Dina is Ellie's close friend and love interest in The Last of Us Part
+      II.<br />
+      She is warm, caring, and fiercely loyal, providing Ellie with emotional
+      support and companionship in a harsh world.<br />
+      <br />
+      Dina grew up in a religious family and has faced hardship but maintains a
+      hopeful and spirited personality.<br />
+      Her empathy and humor help her and Ellie cope with the dangers they
+      face.<br />
+      <br />
+      Dina also carries her own challenges, including an unexpected pregnancy,
+      which adds emotional complexity to her story.
+      <br />
+      She represents the possibility of love, family, and a future despite the
+      violence surrounding them.<br />
+      <br />
+      Dina's relationship with Ellie brings moments of hope and normalcy,
+      contrasting with the story's darker themes.<br />
+      Her character adds emotional warmth and depth, showing the importance of
+      connection and compassion.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Owen</h3>
-            <p class="leading-relaxed space-y-4">
-              Owen is a former Firefly and a member of the WLF, known for his
-              kind heart and inner conflict amidst the brutality around him.<br />
-              Unlike many others in the post-apocalyptic world, Owen dreams of
-              peace and rebuilding a better life rather than endless
-              fighting.<br />
-              <br />
-              He shares a complicated romantic history with Abby, and their
-              relationship is marked by both affection and emotional
-              distance.<br />
-              <br />
-              Owen is often torn between duty and desire, struggling with the
-              moral cost of the WLF’s actions. His deep compassion, especially
-              toward children and the innocent, makes him one of the more
-              empathetic characters in the series.<br />
-              <br />
-              Owen’s arc reminds us that even in dark times, some people still
-              hold on to hope and the possibility of a different future.
-            </p>
-          </div>
-          <img
-            src="/Bilder/owen.webp"
-            alt="Owen"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Lev" image="/Bilder/lev.webp">
+      Lev is a courageous and kind teenager introduced in The Last of Us Part
+      II.<br />
+      Born into the strict and religious Seraphite cult, Lev was assigned female
+      at birth but identifies as male.<br />
+      His identity brings danger and persecution from his community.<br />
+      <br />
+      After escaping, Lev forms a strong bond with Abby, finding friendship and
+      trust.<br />
+      Lev is agile, skilled with a bow, and wise beyond his years.<br />
+      He faces danger with bravery and calm, often providing balance during
+      tense moments.<br />
+      <br />
+      His story is about self-acceptance, breaking free from oppression, and
+      finding belonging in a hostile world.<br />
+      Lev's journey highlights themes of identity, family, and courage.<br />
+      His character adds important representation and emotional depth to the
+      narrative, showing resilience and hope.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Nora</h3>
-            <p class="leading-relaxed space-y-4">
-              Nora is a former Firefly and a dedicated member of the WLF,
-              working as a field medic and often assisting on missions.<br />
-              She is intelligent, composed, and shows a deep sense of loyalty to
-              her comrades — especially Abby.<br />
-              <br />
-              Though she supports the WLF, Nora is not without internal
-              conflict, questioning the morality of their war against the
-              Seraphites.<br />
-              <br />
-              Her encounter with Ellie marks a pivotal and intense moment in the
-              story, highlighting the cycle of revenge that consumes both
-              sides.<br />
-              Nora's character reveals the heavy emotional toll of survival and
-              loyalty in a broken world, showing how even the strong can carry
-              regret and fear beneath the surface.
-            </p>
-          </div>
-          <img
-            src="/Bilder/nora.webp"
-            alt="Nora"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+    <Charaktere title="Jesse" image="/Bilder/jesse.webp">
+      Jesse is a reliable and loyal member of the Jackson community and one of
+      Ellie's closest friends.<br />
+      He is calm, practical, and always ready to help his friends.<br />
+      Jesse often acts as a voice of reason during difficult times.<br />
+      <br />
+      Though caught in complicated personal situations, Jesse never lets
+      emotions cloud his sense of duty.<br />
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Maria</h3>
-            <p class="leading-relaxed space-y-4">
-              Maria is the strong and respected leader of the Jackson community.
-              She is Tommy’s wife and plays a crucial role in maintaining peace
-              and order.<br />
-              <br />
-              Maria is tough, practical, and deeply cares for the safety of her
-              people.<br />
-              Her leadership is marked by wisdom and a willingness to make
-              difficult decisions to protect the town from threats, both
-              infected and hostile humans. She balances compassion with
-              firmness, earning the trust and loyalty of the survivors.<br />
-              <br />
-              Maria’s character shows the importance of community and resilience
-              in a world devastated by the outbreak.
-            </p>
-          </div>
-          <img
-            src="/Bilder/maria.webp"
-            alt="Maria"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
+      <br />His bravery and loyalty make him a steady presence in a dangerous
+      world.<br />
+      <br />
+      Even though his story is tragically cut short, Jesse represents the quiet
+      strength that keeps communities like Jackson alive.<br />
+      His character shows that not every hero is loud or flashy — sometimes, the
+      strongest people are those who stand firm for their friends and values.
+    </Charaktere>
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-          <div class="flex-1">
-            <h3 class="text-2xl font-semibold mb-4">Sara</h3>
-            <p class="leading-relaxed space-y-4"></p>
-          </div>
-          <img
-            src="/Bilder/sara.png"
-            alt="Maria"
-            class="w-[200px] rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-      <p><NuxtLink to="#charakters">Back to top ↑</NuxtLink></p>
-    </main>
+    <Charaktere title="Owen" image="/Bilder/owen.webp">
+      Owen is a former Firefly and WLF soldier with a kind heart and deep
+      internal struggles.<br />
+      He dreams of peace and a better life beyond endless fighting.<br />
+      <br />
+      His complicated relationship with Abby mixes affection and emotional
+      distance, reflecting the difficult choices people face in this world.<br />
+      <br />
+      Owen is torn between loyalty to his group and his desire for a different,
+      less violent future.<br />
+      He shows compassion, especially toward children and the innocent, which
+      makes him one of the more empathetic characters.<br />
+      <br />
+      Owen's story reminds players that even in dark times, some people hold
+      onto hope and the possibility of change.
+    </Charaktere>
+
+    <Charaktere title="Mel" image="/Bilder/mel.webp">
+      Mel is a skilled and compassionate nurse who works closely with the
+      Washington Liberation Front (WLF).<br />
+      She is calm, professional, and deeply committed to caring for her comrades
+      in the harsh, violent world they live in.<br />
+      <br />
+      Despite the constant danger and brutality around her, Mel maintains a
+      sense of hope and kindness, providing a rare source of comfort and
+      stability for those around her.<br />
+      <br />
+      Her relationship with Abby is important, as she serves not only as a medic
+      but also as a trusted friend and support system.<br />
+      Mel's calm demeanor helps balance Abby's sometimes intense and driven
+      nature.<br />
+      <br />
+      She often acts as a voice of reason and compassion within the group,
+      reminding others of their humanity in the midst of chaos.<br />
+      <br />
+      Mel's story is one of quiet strength and resilience.<br />
+      While she may not be on the front lines of battle, her work is essential
+      to the survival of her community.<br />
+      She faces the moral complexities of the war around her with empathy, and
+      her care for others shows that even in dark times, kindness and healing
+      can exist.<br />
+      <br />
+      Mel's character highlights the importance of medical care, emotional
+      support, and loyalty in a world torn apart by violence.<br />
+      Her presence adds depth and humanity to the WLF's story, reminding us that
+      survival is not just about fighting — it's also about caring for one
+      another.
+    </Charaktere>
+
+    <Charaktere title="Nora" image="/Bilder/nora.webp">
+      Nora is a smart, composed medic for the WLF who supports Abby on
+      missions.<br />
+
+      She is loyal, intelligent, and shows great care for her comrades.<br />
+      <br />
+      Nora is also conflicted about the endless violence and struggles with the
+      morality of her group's war.<br />
+      <br />
+      Her encounter with Ellie becomes a turning point, revealing the harsh
+      reality of revenge and loss on both sides of the conflict.<br />
+      <br />
+      Nora's character represents the emotional cost of survival and loyalty,
+      showing that even the strongest people carry fear and regret beneath their
+      surface.
+    </Charaktere>
+
+    <Charaktere title="Maria" image="/Bilder/maria.webp">
+      Maria is the respected leader of the Jackson community and Tommy's
+      wife.<br />
+
+      She is practical, strong, and deeply cares about the safety of her
+      people.<br />
+      <br />
+      Maria works hard to keep peace and order in the town, making tough
+      decisions to protect residents from threats.<br />
+      Her leadership balances strength with compassion, earning the trust and
+      respect of the survivors.
+      <br />
+      <br />
+      Maria's character shows how important community, resilience, and
+      cooperation are in rebuilding a shattered world.<br />
+      She represents hope for a future where people can live with dignity again.
+    </Charaktere>
+
+    <Charaktere title="Sarah" image="/Bilder/sara.png">
+      Sarah is Joel's beloved daughter and one of the most emotionally impactful
+      characters in The Last of Us, despite her brief time on screen.<br />
+      She is kind, bright, and full of life — a typical teenager with a strong
+      bond to her father.<br />
+      <br />
+      Their relationship is filled with warmth, humor, and quiet moments that
+      show how deeply they care for each other.<br />
+      Sarah's compassion and curiosity offer a glimpse into the world before the
+      fall — a time of innocence and normalcy.<br />
+      <br />
+      On the night the outbreak begins, Sarah's world — and Joel's — shatters in
+      an instant. Amid the panic, destruction, and confusion, she is fatally
+      shot by a soldier under government orders.<br />
+      <br />
+      Her sudden, heartbreaking death in Joel's arms becomes one of the most
+      devastating scenes in the series and a defining trauma that haunts him for
+      the rest of his life.<br />
+      <br />
+      Though she is gone early in the story, Sarah's presence is felt throughout
+      the entire narrative.<br />
+      She is the emotional core of Joel's character — the reason he closes
+      himself off from others, the source of his bitterness, and the silent
+      comparison he makes when forming a bond with Ellie.<br />
+      <br />
+      Her memory lingers in the quiet moments, in the way Joel looks at Ellie,
+      in the pain behind his decisions, and in his fierce need to protect what
+      he has left.<br />
+      Sarah represents everything that was lost when the world ended: innocence,
+      love, safety, and the simple beauty of ordinary life.<br />
+      <br />
+      Her tragic end is not just the beginning of Joel's journey — it's the
+      emotional wound that never fully heals, shaping the path of the entire
+      story.
+    </Charaktere>
   </div>
 </template>
 
