@@ -199,7 +199,7 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-header {
+.layout-default > header {
   background-color: #000000d7;
   padding: 10px;
   text-align: center;

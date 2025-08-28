@@ -1,11 +1,11 @@
 <template>
   <div id="infected" class="space-y-12">
-    <h2 class="text-5xl text-center font-bold">Stages of Infection:</h2>
-    <blockquote
-      class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4 max-w-xl mx-auto"
-    >
-      They were human once.
-    </blockquote>
+    <header class="flex flex-col justify-center items-center gap-6">
+      <h2 class="text-5xl text-center font-bold">Stages of Infection:</h2>
+      <h3 class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4">
+        They were human once.
+      </h3>
+    </header>
 
     <Infected title="Runnrs" image="/Bilder/runners.webp">
       Runners are the earliest stage of infection — humans recently overtaken by

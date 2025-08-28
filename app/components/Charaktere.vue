@@ -9,7 +9,10 @@
     <img
       :src="image"
       :alt="title"
-      :class="['w-3/4 md:w-1/4 rounded-lg shadow-lg', $props.class]"
+      :class="[
+        'w-3/4 md:w-1/4 shadow-lg border-b-4 border-b-white',
+        $props.class,
+      ]"
     />
   </div>
 </template>
