@@ -31,31 +31,34 @@
       We're here, and we're listening.
     </p>
     <br />
-    <div class="flex flex-col md:flex-row md:items-start gap-6">
-      <form class="flex-1 space-y-4">
+    <div
+      v-if="!formSubmitted"
+      class="flex flex-col md:flex-row md:items-start gap-6"
+    >
+      <form @submit.prevent="sendMail" class="flex-1 space-y-4">
         <label class="block mb-1" for="name">Name:</label>
         <input
           id="name"
-          name="name"
           type="text"
           required
           class="w-full p-2 rounded bg-gray-700 focus:ring-2 focus:ring-red-500"
+          v-model="formValues.name"
         /><br />
         <label class="block mb-1" for="email">E-Mail:</label>
         <input
           id="email"
-          name="email"
           type="email"
           required
           class="w-full p-2 rounded bg-gray-700 focus:ring-2 focus:ring-red-500"
+          v-model="formValues.email"
         /><br />
         <label class="block mb-1" for="nachricht">Message:</label>
         <textarea
           id="nachricht"
-          name="nachricht"
           rows="5"
           required
           class="w-full p-2 rounded bg-gray-700 focus:ring-2 focus:ring-red-500"
+          v-model="formValues.message"
         ></textarea>
         <br />
         <p>
@@ -71,7 +74,28 @@
         class="sticker w-40 rounded-lg shadow-lg"
       />
     </div>
+    <div v-else class="p-8 bg-green-400/60 text-white text-xl">
+      Danke für die Nachricht!
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const mail = useMail();
+
+const formSubmitted = ref(false);
+const formValues = ref({
+  name: '',
+  email: '',
+  message: '',
+});
+
+const sendMail = async (event) => {
+  await mail.send({
+    from: 'jennie@gigabit.de',
+    subject: 'Formular Webseite',
+    text: `Nachricht von: ${formValues.value.name}  <${formValues.value.email}>\n\nNachricht:\n${formValues.value.message}`,
+  });
+  formSubmitted.value = true;
+};
+</script>
