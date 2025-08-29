@@ -1,19 +1,21 @@
 <template>
   <div id="scars">
-    <div class="flex flex-col justify-center items-center gap-6">
-      <h2 class="text-5xl text-center font-bold">Seraphites</h2>
-      <div class="flex items-center gap-4">
-        <blockquote class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4">
-          "Faith guides us through the shadows."
-        </blockquote>
-        <img
-          src="/Bilder/scars.logo.webp"
-          alt="Scars logo"
-          width="150"
-          class="shrink-0"
-        />
-      </div>
-      <div class="flex items-center gap-4">
+    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+      <div class="flex flex-col justify-center items-center gap-6">
+        <h2 class="text-5xl text-center font-bold">Seraphites</h2>
+        <div class="flex items-center gap-4">
+          <blockquote
+            class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4"
+          >
+            "Faith guides us through the shadows."
+          </blockquote>
+          <img
+            src="/Bilder/scars.logo.webp"
+            alt="Scars logo"
+            width="150"
+            class="shrink-0"
+          />
+        </div>
         <p class="text-base leading-relaxed">
           In a world burned by fire and swallowed by rot,<br />
           the Seraphites emerged not from power or vengeance — but from

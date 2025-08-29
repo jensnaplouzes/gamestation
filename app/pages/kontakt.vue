@@ -11,8 +11,6 @@
   <br />
   <div class="max-w-3xl mx-auto p-8 bg-black/60 rounded-md">
     <p>
-      If you were bitten — or suspect you might have been — please contact us
-      immediately.<br />
       Time is critical, and every second counts.<br />
       <br />
       Whether you need guidance, assistance, or simply someone to talk to, we're
@@ -61,8 +59,8 @@
         ></textarea>
         <br />
         <p>
-          And don't forget: when you're lost in the darkness, look for the
-          light. 🌟
+          And don't forget.. when you're lost in the darkness, look for the
+          light.🌟
         </p>
 
         <button type="submit" class="button-primary">Send</button>

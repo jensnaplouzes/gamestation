@@ -1,23 +1,25 @@
 <template>
   <div id="wolves">
-    <div class="flex flex-col justify-center items-center gap-6">
-      <h2 class="text-5xl text-center font-bold">
-        Washington Liberation Front
-      </h2>
-      <div class="flex items-center">
-        <blockquote class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4">
-          “Loyalty makes us strong. Strength keeps us alive.”
-        </blockquote>
-        <img
-          src="/Bilder/wlf.webp"
-          alt="Fedra logo"
-          width="300"
-          class="shrink-0"
-        />
-      </div>
-      <br />
+    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+      <div class="flex flex-col justify-center items-center gap-6">
+        <h2 class="text-5xl text-center font-bold">
+          Washington Liberation Front
+        </h2>
+        <div class="flex items-center">
+          <blockquote
+            class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4"
+          >
+            “Loyalty makes us strong. Strength keeps us alive.”
+          </blockquote>
+          <img
+            src="/Bilder/wlf.webp"
+            alt="Fedra logo"
+            width="300"
+            class="shrink-0"
+          />
+        </div>
+        <br />
 
-      <div class="flex items-center gap-4">
         <p class="text-base leading-relaxed">
           In the shattered remains of post-pandemic America, when society turned
           to dust and every day became a fight for breath, a new power rose from
