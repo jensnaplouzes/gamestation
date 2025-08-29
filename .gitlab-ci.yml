@@ -8,7 +8,6 @@ build:prod:
   script:
     - npm ci
     - npm run build
-    - mv dist dist_prod
   artifacts:
     expire_in: 1 week
     paths:
@@ -27,4 +26,4 @@ deploy:prod:
   before_script:
     - apk add --no-cache lftp
   script:
-    - lftp -c "set ssl:verify-certificate no; open -u $FTP_USER,$FTP_PW $FTP_HOST; mirror -Rnev dist_prod/ /httpdocs --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
+    - lftp -c "set ssl:verify-certificate no; open -u $FTP_USER,$FTP_PW $FTP_HOST; mirror -Rnev ./ /httpdocs --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
