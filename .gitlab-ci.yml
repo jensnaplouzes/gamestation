@@ -1,29 +1,25 @@
 stages:
-  - build
-  - deploy
+  - build-deploy
 
-build:prod:
-  image: node:22.18
-  stage: build
+build:pwa:prod:
+  image: node:22
+  stage: build-deploy
+  environment:
+    name: prod
+    url: https://jenny.gigabit.dev
+  before_script:
+    - apt -qq update -y && apt -qq install -y rsync openssh-client
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - cp $DEPLOY_PRIVATE_KEY_PRODUCTION ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - cp $DOTENV_PRODUCTION .env
   script:
     - npm ci
     - npm run build
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - dist_prod
+    - find ./ -type f -exec chmod 664 {} + -o -type d -exec chmod 775 {} +
+    - rsync -ra --delete ./ jenny-intern-lou@web-static-01.gigabit.de:/home/jenny-intern-lou/app
+    - ssh jenny-intern-lou@web-static-01.gigabit.de "source ~/.nvm/nvm.sh; nvm use v22.18.0; pm2 restart jenny-lou --update-env && exit"
   only:
-    - main
-
-deploy:prod:
-  image: alpine
-  stage: deploy
-  environment:
-    name: prod
-    url: https://jennie.gigabit.dev/
-  only:
-    - main
-  before_script:
-    - apk add --no-cache lftp
-  script:
-    - lftp -c "set ssl:verify-certificate no; open -u $FTP_USER,$FTP_PW $FTP_HOST; mirror -Rnev ./ /httpdocs --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
+    refs:
+      - tags
