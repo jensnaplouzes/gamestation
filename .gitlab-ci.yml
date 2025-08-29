@@ -21,5 +21,4 @@ build:pwa:prod:
     - rsync -ra --delete ./ jenny-intern-lou@web-static-01.gigabit.de:/home/jenny-intern-lou/app
     - ssh jenny-intern-lou@web-static-01.gigabit.de "source ~/.nvm/nvm.sh; nvm use v22.18.0; pm2 restart jenny-lou --update-env && exit"
   only:
-    refs:
-      - tags
+    - main
