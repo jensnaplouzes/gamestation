@@ -14,7 +14,7 @@ build:prod:
     paths:
       - dist_prod
   only:
-    - master
+    - main
 
 deploy:prod:
   image: alpine
@@ -23,7 +23,7 @@ deploy:prod:
     name: prod
     url: https://jennie.gigabit.dev/
   only:
-    - master
+    - main
   before_script:
     - apk add --no-cache lftp
   script:
