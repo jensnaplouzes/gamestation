@@ -7,7 +7,7 @@ build:prod:
   stage: build
   script:
     - npm ci
-    - nom build
+    - npm build
     - mv dist dist_prod
   artifacts:
     expire_in: 1 week
