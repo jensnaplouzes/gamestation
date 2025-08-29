@@ -13,5 +13,20 @@ export default {
     plugins: [],
   },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-mail'],
+
+  mail: {
+    message: {
+      to: 'jennie@gigabit.de',
+    },
+    smtp: {
+      host: 'mail.gigabit.de',
+      port: 465,
+      secure: true,
+      auth: {
+        user: 'jennie@gigabit.de',
+        pass: '-,95,nTHRESPInAillaCOcILEnteNestAteLe',
+      },
+    },
+  },
 };
