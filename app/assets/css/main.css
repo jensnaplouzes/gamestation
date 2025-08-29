@@ -166,6 +166,25 @@ body.scars::before {
   opacity: 1;
 }
 
+body.kontakt {
+  position: relative;
+  z-index: 0;
+}
+
+body.kontakt::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/Bilder/kontakte.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+}
+
 body.hbo {
   position: relative;
   z-index: 0;
@@ -248,14 +267,6 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-ul {
-  background-color: #1f1f1f;
-  padding: 15px;
-  border-left: 4px solid #c05030;
-  border-radius: 4px;
-  list-style-type: square;
 }
 
 .charaktere-wrapper {

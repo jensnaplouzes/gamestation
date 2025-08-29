@@ -1,4 +1,6 @@
 <template>
+  <div id="index" class="w-full">
+    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
       <h1 class="text-4xl font-bold">Enter The Last of Us Zone</h1>
       <h2 class="text-2xl">Trust no one. Fear Everything.</h2>
       <h3 class="text-xl italic">A world where survival means sacrifice.</h3>
@@ -16,6 +18,7 @@
         </blockquote>
       </section>
       <br></br>
+      
       <section class="cta space-y-4">
         <h3 class="text-2xl font-semibold">Ready to face the infected?</h3>
         <p class="text-base leading-relaxed">
@@ -46,6 +49,8 @@
           The Last Faces Of Hope
         </NuxtLink>
       </section>
+      </div>
+      </div>
 </template>
 
 <script setup></script>
