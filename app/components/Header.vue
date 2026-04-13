@@ -1,26 +1,45 @@
 <template>
   <header>
-    <NuxtLink to="/">
-      <img src="/Bilder/tlou1.png" alt="The Last of Us" width="300" />
-    </NuxtLink>
-    <nav>
-      <NuxtLink to="/">The Last of Us</NuxtLink>
-      <NuxtLink to="/ueber">About The Game</NuxtLink>
-      <NuxtLink to="/charaktere">Characters</NuxtLink>
-      <NuxtLink to="/infected">Infected</NuxtLink>
-      <NuxtLink to="/fireflies">Fireflies</NuxtLink>
-      <NuxtLink to="/fedra">Fedra</NuxtLink>
-      <NuxtLink to="/wlf">WLF</NuxtLink>
-      <NuxtLink to="/scars">Scars</NuxtLink>
-      <NuxtLink to="/hbo">HBO Series</NuxtLink>
-      <NuxtLink to="/kontakt">Contact</NuxtLink>
-    </nav>
+    <div class="header-container">
+      <NuxtLink to="/">
+        <img src="/Bilder/ps5.logo.png" alt="Game Station Central Logo" class="logo" width="100" />
+        <nav class="nav-links"></nav>
+      </NuxtLink>
+      <nav>
+        <NuxtLink to="/thelastofus">The Last Of Us</NuxtLink>
+        <NuxtLink to="/reddead">Red Dead Redemption II</NuxtLink>
+        <NuxtLink to="/godofwar">God Of War</NuxtLink>
+        <NuxtLink to="/mafia">Mafia</NuxtLink>
+        <NuxtLink to="/uncharted">Uncharted</NuxtLink>
+        <NuxtLink to="/wlf">Grand Theft Auto</NuxtLink>
+        <NuxtLink to="/scars">Tomb Raider</NuxtLink>
+        <NuxtLink to="/hbo">HBO </NuxtLink>
+      </nav>
+    </div>
   </header>
-  <div class="scroll-trigger"></div>
 </template>
+
 <style scoped>
-@reference "../assets/css/main.css";
-header {
-  @apply flex justify-center flex-col items-center gap-8;
+@reference "../assets/css/main.css"; /* استدعاء ملف CSS خارجي */
+.header-container {
+  display: flex; /* ترتيب العناصر بشكل أفقي */
+  align-items: center; /* محاذاة العناصر عمودياً */
+  gap: 20px; /* مسافة بين العناصر */
+  padding: 10px 20px; /* حشوة داخلية */
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none; /* إزالة الخط تحت النص */
+  margin-left: 200px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f39c12; /* تغير اللون عند المرور على الرابط */
 }
 </style>

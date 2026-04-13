@@ -1,83 +1,292 @@
 <template>
-  <div id="wolves">
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
-      <div class="flex flex-col justify-center items-center gap-6">
-        <h2 class="text-5xl text-center font-bold">
-          Washington Liberation Front
-        </h2>
-        <div class="flex items-center">
-          <blockquote
-            class="border-l-4 border-red-700 pl-4 text-2xl italic mb-4"
-          >
-            “Loyalty makes us strong. Strength keeps us alive.”
-          </blockquote>
-          <img
-            src="/Bilder/wlf.webp"
-            alt="Fedra logo"
-            width="300"
-            class="shrink-0"
-          />
-        </div>
-        <br />
+  <div id="uncharted" class="w-full">
+    <!-- Welcome Section -->
+    <div class="flex flex-col items-center space-y-4">
+      <img src="/Bilder/wlc.to.png" alt="Welcome" width="300" />
+      <img src="/Bilder/uncharted.logo.png" alt="Uncharted 4 Logo" width="400" />
+      <img src="/Bilder/earned.png" alt="Earned" width="900" />
+    </div>
+    <br />
 
-        <p class="text-base leading-relaxed">
-          In the shattered remains of post-pandemic America, when society turned
-          to dust and every day became a fight for breath, a new power rose from
-          the rubble of Seattle.<br />
-          Not born from hope, not from healing — but from strength, structure,
-          and a refusal to kneel.<br />
-          <br />
-          The Washington Liberation Front — or as most know them — the
-          Wolves.<br />
-          They don't whisper about the past. They don't dream. The Wolves
-          conquer.<br />
-          Once just another resistance cell fighting against FEDRA, the WLF won.
-          They drove the regime out with blood and fire. But what was left in
-          its place wasn't peace — it was a new kind of order.<br />
-          One with guns, walls, drills, and boots pounding the ground in perfect
-          unison.<br />
-          A military machine built from scratch, hardened by war, fueled by
-          loyalty, and held together by the will of a leader.<br />
-          <br />
-          The Wolves don't survive — they dominate. Trained. Armed. Disciplined.
-          Most of them are former soldiers or survivors who've shed weakness
-          like skin.<br />
-          They move in squads, speak in codes, and obey without hesitation.<br />
-          To them, community is sacred — but only their own. Outsiders are
-          threats. Enemies are exterminated.<br />
-          Their philosophy is simple: we protect our own, no matter the cost.<br />
-          <br />
-          Their greatest war is not with the infected, but with the Seraphites —
-          the Scars — a rival faction driven by blind faith and ritual.<br />
-          To the Wolves, the Scars are dangerous, backward zealots.<br />
-          To the Scars, the Wolves are godless machines.<br />
-          Between them lies a battlefield soaked in vengeance and
-          misunderstanding — a war with no end, only escalation.<br />
-          <br />
-          But beneath the uniforms and brutality, the Wolves are still human.<br />
-          They mourn their dead. They laugh around fires. They cling to what
-          they've built with desperate pride.<br />
-          Some of them remember why they fight.<br />
-          Others just follow orders because the world doesn't offer any other
-          way to live.<br />
-          <br />
-          They say they're building a better world. A stronger one. And maybe,
-          in some twisted way, they are.<br />
-          But every step forward is paid for in blood — theirs, and everyone
-          else's.<br />
-          In their rise, they've become what they once fought against: a force
-          too powerful, too feared, and too far gone to stop.<br />
-          <br />
-          In The Last of Us Part II, the Wolves represent more than just a
-          faction. They are a brutal reflection of survival without compassion —
-          a vision of what happens when strength becomes the only value left
-          standing.<br />
-          They howl not just for power, but because it's the only sound that
-          drowns out the silence of everything they've lost.
-        </p>
+    <p class="text-white text-center text-lg mb-6">
+      Legends aren't found—they're chased.<br />
+      Maps crumble, paths vanish, and every step could uncover a secret lost to time.<br />
+      Old bonds are tested, new dangers awaken, and the world waits for those willing to risk
+      everything.<br />
+      Adventure calls. Will you answer?
+    </p>
+
+    <br />
+
+    <!-- Part 1 Content -->
+    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+      <div class="flex justify-center">
+        <img src="/Bilder/p01.png" alt="The Last of Us - Part I" width="700" />
+      </div>
+
+      <p class="text-white mt-4">Game Story</p>
+      <br />
+
+      <!-- Part 1 Characters Banner -->
+      <img
+        src="/Bilder/character1.png"
+        alt="Characters - Part I"
+        width="500"
+        class="mx-auto mt-6"
+      />
+      <br />
+
+      <!-- Active Card for Part 1 -->
+      <div
+        v-if="activeCardPart1 !== null"
+        class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
+      >
+        <div
+          class="card-large"
+          :style="{ backgroundImage: `url(${charactersPart1[activeCardPart1].image})` }"
+        ></div>
+        <div class="text-white text-base md:text-lg flex-1 min-w-0">
+          <h3 class="text-xl font-bold mb-2">{{ charactersPart1[activeCardPart1].name }}</h3>
+          <p>{{ charactersPart1[activeCardPart1].description }}</p>
+        </div>
+      </div>
+
+      <!-- Part 1 Character Cards in Grouped Rows -->
+      <div class="flex flex-wrap gap-6 justify-center">
+        <template v-for="(char, index) in charactersPart1" :key="index">
+          <div class="text-center">
+            <div
+              class="card"
+              :style="{ backgroundImage: `url(${char.image})` }"
+              @click="activeCardPart1 = activeCardPart1 === index ? null : index"
+            ></div>
+            <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Part 2 Content -->
+    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-2">
+      <div class="flex justify-center">
+        <img src="/Bilder/p02.png" alt="The Last of Us - Part II" width="700" />
+      </div>
+      <img src="/Bilder/story2.png" alt="The Last of Us - Part II" width="600" class="mx-auto" />
+      <br />
+
+      <p class="text-white mt-4">Game Story II</p>
+      <br />
+      <br />
+
+      <!-- Part 2 Characters Banner -->
+      <img
+        src="/Bilder/character2.png"
+        alt="Characters - Part II"
+        width="500"
+        class="mx-auto mt-6"
+      />
+      <br />
+
+      <!-- Active Card for Part 2 -->
+      <div
+        v-if="activeCardPart2 !== null"
+        class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
+      >
+        <div
+          class="card-large"
+          :style="{ backgroundImage: `url(${charactersPart2[activeCardPart2].image})` }"
+        ></div>
+        <div class="text-white text-base md:text-lg flex-1 min-w-0">
+          <h3 class="text-xl font-bold mb-2">{{ charactersPart2[activeCardPart2].name }}</h3>
+          <p>{{ charactersPart2[activeCardPart2].description }}</p>
+        </div>
+      </div>
+
+      <!-- Part 2 Character Cards -->
+      <div class="flex flex-wrap gap-6 justify-center">
+        <div v-for="(char, index) in charactersPart2" :key="index" class="text-center">
+          <div
+            class="card"
+            :style="{ backgroundImage: `url(${char.image})` }"
+            @click="activeCardPart2 = activeCardPart2 === index ? null : index"
+          ></div>
+          <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Infected Section -->
+    <div class="mt-12">
+      <div class="flex flex-col justify-center items-center">
+        <img src="/Bilder/human.png" alt="The Infected" width="600" class="shrink-0" />
+      </div>
+      <div class="flex justify-center">
+        <img src="/Bilder/infecteds0.png" alt="Infecteds 0" width="300" />
+      </div>
+      <img src="/Bilder/infecteds1.png" alt="Infecteds 1" width="900" class="mx-auto" />
+      <br />
+      <br />
+      <br />
+
+      <!-- Active Infected Card -->
+      <div
+        v-if="activeInfected !== null"
+        class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
+      >
+        <div
+          class="card-large"
+          :style="{ backgroundImage: `url(${infected[activeInfected].image})` }"
+        ></div>
+        <div class="text-white text-base md:text-lg flex-1 min-w-0">
+          <h3 class="text-xl font-bold mb-2">{{ infected[activeInfected].name }}</h3>
+          <p>{{ infected[activeInfected].description }}</p>
+        </div>
+      </div>
+
+      <!-- Infected Cards -->
+      <div class="flex flex-wrap gap-6 justify-center">
+        <div v-for="(inf, index) in infected" :key="index" class="text-center">
+          <div
+            class="card-infected"
+            :style="{ backgroundImage: `url(${inf.image})` }"
+            @click="activeInfected = activeInfected === index ? null : index"
+          ></div>
+          <p class="mt-2 font-semibold text-white">{{ inf.name }}</p>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <!-- Game Features Section -->
+    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8">
+      <div>
+        <img src="/Bilder/features.png" alt="Game Features" width="300" />
+        <br />
+      </div>
+      <div class="space-y-4">
+        <div
+          v-for="(feature, index) in features"
+          :key="index"
+          class="feature-row p-4 text-white"
+          @click="toggleFeature(index)"
+        >
+          <p class="font-bold text-lg">{{ feature.title }}</p>
+          <p v-if="activeFeatures[index]" class="mt-1">{{ feature.description }}</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const charactersPart1 = [
+  {
+    name: 'Joel',
+    image: '/Bilder/joel2.webp',
+    description: ``,
+  },
+];
+
+const activeCardPart1 = ref(null);
+
+const charactersPart2 = [
+  {
+    name: 'Joel',
+    image: '/Bilder/joel0.webp',
+    description: ``,
+  },
+];
+
+const activeCardPart2 = ref(null);
+
+const infected = [
+  {
+    name: 'Runner',
+    image: '/Bilder/runner.webp',
+    description: '',
+  },
+];
+
+const activeInfected = ref(null);
+
+const features = [
+  {
+    title: '🧟 Stealth',
+    description: '',
+  },
+];
+
+const activeFeatures = ref(features.map(() => false));
+
+function toggleFeature(index) {
+  activeFeatures.value[index] = !activeFeatures.value[index];
+}
+
+const showText = ref(false);
+</script>
+
+<style scoped>
+.card {
+  width: 250px;
+  height: 350px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+}
+.card-infected {
+  width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: top center;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.card-infected:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+}
+
+.card-large {
+  width: 250px;
+  height: 400px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+.text-white {
+  color: white;
+}
+.feature-row {
+  transition:
+    background-color 0.7s ease,
+    transform 0.4s ease;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 1px;
+}
+
+.feature-row:hover {
+  background-color: rgba(223, 35, 35, 0.247);
+  box-shadow: 0 0 12px #ff6347;
+  transform: scale(1.1);
+}
+</style>
