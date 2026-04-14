@@ -1,4 +1,5 @@
 <template>
+  <div class="card hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] transition"></div>
   <div id="rdr2" class="w-full">
     <!-- Welcome Section -->
     <div class="flex flex-col items-center space-y-4">
@@ -21,7 +22,7 @@
     <br />
 
     <!-- Red Dead 2 Content -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+    <div class="container">
       <div class="flex flex-col items-center space-y-4">
         <img src="/Bilder/rdr2logo.png" alt="Red Dead Redemption II" width="700" />
         <img src="/Bilder/rdr22.png" alt="Red Dead" width="700" />
@@ -79,7 +80,7 @@
         <template v-for="(char, index) in charactersPart1" :key="index">
           <div class="text-center">
             <div
-              class="card"
+              class="card transition duration-300 hover:scale-105"
               :style="{ backgroundImage: `url(${char.image})` }"
               @click="activeCardPart1 = activeCardPart1 === index ? null : index"
             ></div>
@@ -90,7 +91,7 @@
     </div>
 
     <!-- Red Dead Redemption II Characters II -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-2">
+    <div class="container">
       <div class="flex justify-center">
         <img src="/Bilder/blood.png" alt="Characters II" width="700" />
       </div>
@@ -115,7 +116,7 @@
       <div class="flex flex-wrap gap-6 justify-center">
         <div v-for="(char, index) in charactersPart2" :key="index" class="text-center">
           <div
-            class="card"
+            class="card transition duration-300 hover:scale-105"
             :style="{ backgroundImage: `url(${char.image})` }"
             @click="activeCardPart2 = activeCardPart2 === index ? null : index"
           ></div>
@@ -127,7 +128,7 @@
     <br />
 
     <!-- Game Features Section -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8">
+    <div class="container">
       <div>
         <img src="/Bilder/features.png" alt="Game Features" width="300" />
         <br />
@@ -482,6 +483,7 @@ const showText = ref(false);
 </script>
 
 <style scoped>
+@reference "@/assets/css/main.css";
 .card {
   width: 200px;
   height: 300px;
@@ -493,10 +495,7 @@ const showText = ref(false);
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-}
+
 .card-large {
   width: 250px;
   height: 400px;
@@ -505,9 +504,7 @@ const showText = ref(false);
   background-position: center;
   flex-shrink: 0;
 }
-.text-white {
-  color: white;
-}
+
 .feature-row {
   transition:
     background-color 0.7s ease,

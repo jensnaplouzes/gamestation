@@ -1,12 +1,11 @@
 <template>
-  <div id="uncharted" class="w-full">
+  <div id="uncharted" class="w-full container">
     <!-- Welcome Section -->
     <div class="flex flex-col items-center space-y-4">
       <img src="/Bilder/wlc.to.png" alt="Welcome" width="300" />
       <img src="/Bilder/uncharted.logo.png" alt="Uncharted 4 Logo" width="400" />
       <img src="/Bilder/earned.png" alt="Earned" width="900" />
     </div>
-    <br />
 
     <p class="text-white text-center text-lg mb-6">
       Some secrets can't be found—they must be hunted.<br />
@@ -19,10 +18,8 @@
       Adventure is calling. Will you dare to answer?
     </p>
 
-    <br />
-
     <!-- Part 1 Content -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+    <div class="container py-8">
       <div class="flex flex-col items-center">
         <img src="/Bilder/gold.png" alt="Gold" width="700" />
         <img src="/Bilder/fam.png" alt="Family" width="700" />
@@ -51,21 +48,24 @@
         of a hero lies in the people they fight for, not the legends they chase. Every step of the
         journey mattered—not for what he found, but for who he became along the way.
       </p>
-      <br />
 
       <!-- Part 1 Characters Banner -->
       <img src="/Bilder/odds.png" alt="Uncharted 4 Characters" width="500" class="mx-auto mt-6" />
-      <br />
 
       <!-- Active Card for Part 1 -->
       <div
         v-if="activeCardPart1 !== null"
         class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
       >
-        <div
-          class="card-large"
-          :style="{ backgroundImage: `url(${charactersPart1[activeCardPart1].image})` }"
-        ></div>
+        <Card
+          :image="charactersPart1[activeCardPart1].image"
+          :name="charactersPart1[activeCardPart1].name"
+          :onClick="
+            () => {
+              activeCardPart1 = activeCardPart1 === index ? null : index;
+            }
+          "
+        />
         <div class="text-white text-base md:text-lg flex-1 min-w-0">
           <h3 class="text-xl font-bold mb-2">{{ charactersPart1[activeCardPart1].name }}</h3>
           <p>{{ charactersPart1[activeCardPart1].description }}</p>
@@ -75,24 +75,23 @@
       <!-- Part 1 Character Cards in Grouped Rows -->
       <div class="flex flex-wrap gap-6 justify-center">
         <template v-for="(char, index) in charactersPart1" :key="index">
-          <div class="text-center">
-            <div
-              class="card"
-              :style="{ backgroundImage: `url(${char.image})` }"
-              @click="activeCardPart1 = activeCardPart1 === index ? null : index"
-            ></div>
-            <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
-          </div>
+          <Card
+            :image="char.image"
+            :name="char.name"
+            :onClick="
+              () => {
+                activeCardPart1 = activeCardPart1 === index ? null : index;
+              }
+            "
+          />
         </template>
       </div>
     </div>
-    <br />
 
     <!-- Game Features Section -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8">
+    <div class="container py-8">
       <div>
         <img src="/Bilder/features.png" alt="Game Features" width="300" />
-        <br />
       </div>
       <div class="space-y-4">
         <div
@@ -111,37 +110,44 @@
 
 <script setup>
 import { ref } from 'vue';
+import Card from '../components/Card.vue';
 
 const charactersPart1 = [
   {
     name: 'Nathan Drake',
     image: '/Bilder/nathan.webp',
-    description: ``,
+    description:
+      'Nathan Drake, a seasoned adventurer, is known for his daring exploits in search of ancient treasures. With a sharp mind and quick reflexes, he faces overwhelming odds on his quests.',
   },
   {
     name: 'Samuel Drake',
     image: '/Bilder/samuel.webp',
-    description: ``,
+    description:
+      'Samuel Drake, Nathan’s older brother, joins him on his quest. His loyalty to Nathan and his daring attitude make him a vital part of the adventure.',
   },
   {
     name: 'Rafe Adler',
     image: '/Bilder/rafe.webp',
-    description: ``,
+    description:
+      'Rafe Adler is a wealthy and ambitious treasure hunter. He’s a rival to Nathan, and his pursuit of wealth and glory makes him an unpredictable adversary.',
   },
   {
     name: 'Elena Fisher',
     image: '/Bilder/elena.webp',
-    description: ``,
+    description:
+      'Elena Fisher is a journalist and Nathan’s love interest. She’s resourceful, courageous, and provides much-needed support to Nathan throughout their perilous journey.',
   },
   {
     name: 'Victor Sullivan',
     image: '/Bilder/victor.webp',
-    description: ``,
+    description:
+      'Victor “Sully” Sullivan is a veteran treasure hunter and Nathan’s mentor. His quick wit and experience make him an invaluable guide on Nathan’s adventures.',
   },
   {
     name: 'Nadine Ross',
     image: '/Bilder/nadine.webp',
-    description: ``,
+    description:
+      'Nadine Ross is a fierce mercenary leader. With her tactical skills and ruthless determination, she proves to be a formidable force in the pursuit of treasure.',
   },
 ];
 
@@ -205,49 +211,4 @@ const activeFeatures = ref(features.map(() => false));
 function toggleFeature(index) {
   activeFeatures.value[index] = !activeFeatures.value[index];
 }
-
-const showText = ref(false);
 </script>
-
-<style scoped>
-.card {
-  width: 300px;
-  height: 400px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-}
-.card-large {
-  width: 250px;
-  height: 400px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
-}
-.text-white {
-  color: white;
-}
-.feature-row {
-  transition:
-    background-color 0.7s ease,
-    transform 0.4s ease;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 1px;
-}
-
-.feature-row:hover {
-  background-color: rgba(223, 35, 35, 0.247);
-  box-shadow: 0 0 12px #ff6347;
-  transform: scale(1.1);
-}
-</style>

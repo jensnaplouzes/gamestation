@@ -1,6 +1,6 @@
 <template>
   <div id="mafia1" class="w-full">
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+    <div class="container">
       <div class="flex flex-col justify-center items-center gap-6">
         <div class="flex items-center">
           <img src="/Bilder/mafia.logo.webp" alt="Mafia logo" width="450" class="shrink-0" />

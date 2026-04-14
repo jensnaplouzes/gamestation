@@ -1,135 +1,115 @@
 <template>
   <div id="index" class="w-full">
-    <!-- الحاوية الرئيسية لصفحة البداية -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
-      <!-- حاوية بعرض محدود + محاذاة للوسط + حشوة + فراغات بين العناصر -->
-      <h1 class="text-4xl font-bold">Welcome to Game Station Central</h1>
-      <!-- عنوان رئيسي -->
-      <h2 class="text-2xl">Trust no one. Fear Everything.</h2>
-      <!-- عنوان فرعي -->
-      <h3 class="text-xl italic">
-        Your ultimate hub for everything PlayStation<br />
-        <!-- عنوان فرعي مائل -->
-        – from “The Last of Us” to epic adventures, characters, and hidden secrets.
-      </h3>
-      <!-- تكملة النص -->
-      <p class="text-base leading-relaxed">
-        <!-- فقرة نصية -->
-        Step into a hauntingly beautiful world where nature reclaims cities and everyday is a fight
-        to stay alive.<br />
-        <!-- وصف العالم -->
-        In <strong>The Last Of Us</strong>, humanity is pushed to its breaking point. Fear and hope
-        collide in abandoned streets, hidden forests, and crumbling buildings.
-        <!-- محور اللعبة -->
-      </p>
-      <section class="quote p-4">
-        <!-- قسم اقتباس -->
-        <blockquote class="text-lg italic">
-          <!-- اقتباس مائل -->
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+      <!-- HERO SECTION -->
+      <div class="text-center space-y-4">
+        <h1 class="text-4xl font-bold text-white">Welcome to Game Station Central</h1>
+
+        <h2 class="text-2xl text-white/80">Trust no one. Fear Everything.</h2>
+
+        <h3 class="text-xl italic text-white/70">
+          Your ultimate hub for everything PlayStation<br />
+          – from The Last of Us, Red Dead II, God Of War, Mafia, usw. to epic adventures,
+          characters, and hidden secrets.
+        </h3>
+      </div>
+
+      <!-- INTRO TEXT -->
+      <div class="text-white text-base leading-relaxed space-y-4">
+        <p>
+          Step into a hauntingly atmospheric world where the familiar has become strange, and every
+          step could mean survival or loss.<br />
+          Through decaying structures, overgrown landscapes, and silent ruins, you navigate a
+          reality where hope and despair exist side by side. Every choice matters — and every second
+          has the power to change everything.<br />
+        </p>
+      </div>
+
+      <!-- QUOTE -->
+      <section class="p-4 border-l-4 border-red-600 bg-black/20">
+        <blockquote class="text-lg italic text-white">
           "When you're lost in the darkness, look for the light."
-          <span>– The Fireflies</span>
-          <!-- مصدر الاقتباس -->
+          <span class="block text-sm text-white/60 mt-1">– The Fireflies</span>
         </blockquote>
       </section>
-      <br /><!-- مسافة فارغة -->
 
-      <section class="cta space-y-4">
-        <!-- قسم دعوة للتفاعل -->
-        <h3 class="text-2xl font-semibold">Ready to face the infected?</h3>
-        <!-- عنوان فرعي -->
-        <p class="text-base leading-relaxed">
-          <!-- فقرة -->
-          The World ended - but the story didn't.<br />The silence that followed was louder than the
-          screams.
-          <!-- وصف الجو -->
-        </p>
-        <h3>What really happend in the quarantibe zones?</h3>
-        <!-- سؤال لجذب القارئ -->
-        <p>Secrets were buried under rubble and lies.</p>
-        <!-- شرح مختصر -->
-        <br />
-        <h3>Every spore has a story.</h3>
-        <!-- عنوان -->
-        <p>Some chose survival. Others chose hope.</p>
-        <!-- شرح مختصر -->
-        <br />
-        <h3>The fireflies had a plan. Or did they?</h3>
-        <!-- استفهام -->
-        <p>In the end. it all came down to two people.</p>
-        <!-- شرح مختصر -->
-        <br />
-        <h3>
-          Joel survived. But at what cost?<br />
-          Ellie's immunity was never the whole story.
+      <!-- CTA SECTION -->
+      <section class="space-y-4 text-white">
+        <h3 class="text-2xl font-semibold">
+          So… what happens when myth and reality start to blur?
         </h3>
-        <!-- العنوان الرئيسي للقصة -->
-        <p>
-          So ask yourself -
-          <strong>What would you do for someone you love?</strong>
-        </p>
-        <!-- دعوة للتفكير -->
-        <br />
-        <br />
-        <p>
-          In a world like this, survival isn't just about strength - it's about the people you
-          trust, the choises you make, and the burdens you carry.<br />Some followed order. Some
-          followed hope. And some...just tried to make it trough the day.<br />These aren't heroes.
-          They're survivors. And every one of them has price o pay.
-        </p>
-        <!-- شرح العالم وصراع البقاء -->
-        <p>
-          <strong>Survival of the fittest... yet stubbornness wins the longest battles.</strong>
-        </p>
-        <!-- خاتمة الفقرة -->
 
-        <NuxtLink to="/charaktere" class="button-primary">
-          The Last Faces Of Hope
-          <!-- زر رابط للصفحة التالية -->
+        <p class="text-white/80">
+          When gods walk unseen among criminals, and empires built on lies begin to collapse?
+        </p>
+
+        <h3 class="font-semibold">
+          So… who can you trust when every ally hides a secret of their own?
+        </h3>
+        <p>And every mission pulls you deeper into a world you were never meant to survive?</p>
+
+        <h3 class="font-semibold">
+          So… will you follow the path of honor, or embrace the chaos to get what you want?
+        </h3>
+        <p>
+          Because every city has its underworld. Every legend has a beginning. And every hero is
+          just one decision away from becoming something else.
+        </p>
+
+        <h3 class="font-semibold">
+          So… are you ready to step into a story where nothing is what it seems?
+        </h3>
+
+        <NuxtLink
+          to="/charaktere"
+          class="inline-block mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 transition rounded-lg font-semibold"
+        >
+          Dive In
         </NuxtLink>
       </section>
 
-      <h2 class="text-2xl font-semibold">Meet The Heroes</h2>
-      <!-- عنوان قسم مميزات اللعب -->
+      <!-- FEATURES -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold text-white">Meet The Heroes</h2>
 
-      <table class="w-0.5/4 table-auto border-collapse">
-        <!-- جدول مميزات اللعب -->
+        <table class="w-full border-collapse text-white">
+          <tbody>
+            <tr
+              v-for="(feature, index) in features"
+              :key="index"
+              @click="toggleFeature(index)"
+              class="cursor-pointer transition hover:bg-red-700/20 hover:scale-[1.01]"
+            >
+              <td class="p-3 w-10">
+                <span
+                  class="inline-block transition-transform"
+                  :class="{ 'rotate-90': activeFeatures[index] }"
+                >
+                  ☰
+                </span>
+              </td>
 
-        <tbody>
-          <tr
-            v-for="(feature, index) in features"
-            :key="index"
-            @click="toggleFeature(index)"
-            class="feature-item cursor-pointer transition transform hover:scale-105 hover:bg-red-700/20 rounded-md"
-          >
-            <!-- صف قابل للنقر لكل ميزة -->
+              <td class="p-3 font-semibold">
+                {{ feature.title }}
+              </td>
 
-            <td class="p-2">
-              <span
-                :class="{
-                  'icon inline-block mr-2 transition-transform': true,
-                  'rotate-90': activeFeatures[index],
-                }"
-                >☰</span
-              >
-              <!-- أيقونة صغيرة تدور عند النقر -->
-            </td>
-
-            <td class="p-2 font-semibold">{{ feature.title }}</td>
-            <!-- اسم الميزة -->
-
-            <td class="p-2">
-              <span v-if="activeFeatures[index]">{{ feature.description }}</span>
-              <!-- وصف الميزة يظهر عند النقر -->
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <td class="p-3 text-white/70">
+                <span v-if="activeFeatures[index]">
+                  {{ feature.description }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import Card from '@/components/Card.vue'; // Import the Card component
 
 const features = [
   {
@@ -140,10 +120,7 @@ const features = [
     title: '🔪 Arthur Morgan',
     description: 'Engage in intense close-quarters combat and brutal gunfights.',
   },
-  {
-    title: '🧰 Kratos',
-    description: 'Scavenge for scarce supplies and craft essential items.',
-  },
+  { title: '🧰 Kratos', description: 'Scavenge for scarce supplies and craft essential items.' },
   {
     title: '🔓 Vito',
     description: 'Customize your weapons and skills to suit your playstyle - but choose wisely.',
@@ -154,7 +131,7 @@ const features = [
   },
   {
     title: '🎯 CJ',
-    description: 'Master realistic weapon handling and limites resources - every shot counts.',
+    description: 'Master realistic weapon handling and limited resources - every shot counts.',
   },
   {
     title: '🌍 Lara Croft',
@@ -164,7 +141,7 @@ const features = [
   {
     title: '📖 Lore',
     description:
-      "Uncover notes, recordings, and environmental clues that piece together the world's collapse",
+      'Uncover notes, recordings, and environmental clues that piece together the world’s collapse.',
   },
   {
     title: '🎭 Storytelling',

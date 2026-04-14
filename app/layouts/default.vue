@@ -5,11 +5,8 @@
       <slot />
     </main>
     <button class="scroll-up" @click="scrollToTop">
-      <!-- زر للعودة للأعلى -->
       &#8593;
-      <!-- سهم للأعلى -->
       <span class="sr-only">Nach oben</span>
-      <!-- نص لقراء الشاشة -->
     </button>
     <Footer />
   </div>
@@ -19,47 +16,44 @@
 import { onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
-const route = useRoute(); // الحصول على بيانات الصفحة الحالية
+const route = useRoute();
 
 const setBodyClass = () => {
-  // دالة لتعيين كلاس للـ body حسب الصفحة
-  document.body.className = ''; // مسح أي كلاس موجود
-  const pageClass = route.name?.toString().toLowerCase() || ''; // تحويل اسم الصفحة لكلاس صغير
+  document.body.className = '';
+  const pageClass = route.name?.toString().toLowerCase() || '';
 
   if (pageClass) {
-    document.body.classList.add(pageClass); // إضافة كلاس الصفحة للجسم
+    document.body.classList.add(pageClass);
   }
 };
 
 onMounted(() => {
-  // تنفيذ عند تحميل الكمبوننت
-  setBodyClass(); // استدعاء دالة تعيين الكلاس
+  setBodyClass();
 });
 watch(
-  () => route.name, // مراقبة تغيير اسم الصفحة
+  () => route.name,
   () => {
-    setBodyClass(); // إعادة تعيين الكلاس عند التغيير
+    setBodyClass();
   }
 );
 const scrollToTop = (e) => {
-  // دالة للتمرير للأعلى عند الضغط
-  e.preventDefault(); // منع السلوك الافتراضي للزر
+  e.preventDefault();
   window.scrollTo({
-    top: 0, // اذهب لأعلى الصفحة
-    behavior: 'smooth', // تمرير سلس
+    top: 0,
+    behavior: 'smooth',
   });
 };
 </script>
 
 <style scoped>
-@reference "../assets/css/main.css"; /* استدعاء ملف CSS خارجي */
+@reference "../assets/css/main.css";
 .layout-default {
-  display: flex; /* ترتيب العناصر أفقي/عمودي */
-  flex-direction: column; /* ترتيب عمودي */
+  display: flex;
+  flex-direction: column;
 }
 
 .scroll-up {
   @apply fixed z-50 right-4 bottom-8 w-12 h-12 rounded-3xl opacity-90 transition-all duration-300 ease-in-out cursor-pointer hover:bottom-10 hover:opacity-100; /* تصميم الزر وموقعه */
-  @apply bg-white text-black text-lg font-extrabold hover:bg-blue-500/60; /* ألوان وحجم النص + hover */
+  @apply bg-white text-black text-lg font-extrabold hover:bg-blue-500/60;
 }
 </style>

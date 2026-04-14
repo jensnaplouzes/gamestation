@@ -1,4 +1,5 @@
 <template>
+  <div class="card hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] transition"></div>
   <div id="story" class="w-full">
     <!-- Welcome Section -->
     <div class="flex flex-col justify-center items-center">
@@ -26,7 +27,7 @@
     <br />
 
     <!-- Part 1 Content -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+    <div class="container py-8">
       <div class="flex justify-center">
         <img src="/Bilder/p01.png" alt="The Last of Us - Part I" width="700" />
       </div>
@@ -88,7 +89,7 @@
         <template v-for="(char, index) in charactersPart1" :key="index">
           <div class="text-center">
             <div
-              class="card"
+              class="card transition duration-300 hover:scale-105"
               :style="{ backgroundImage: `url(${char.image})` }"
               @click="activeCardPart1 = activeCardPart1 === index ? null : index"
             ></div>
@@ -102,7 +103,7 @@
     <br />
 
     <!-- Part 2 Content -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-2">
+    <div class="container py-8">
       <div class="flex justify-center">
         <img src="/Bilder/p02.png" alt="The Last of Us - Part II" width="700" />
       </div>
@@ -167,7 +168,7 @@
       <div class="flex flex-wrap gap-6 justify-center">
         <div v-for="(char, index) in charactersPart2" :key="index" class="text-center">
           <div
-            class="card"
+            class="card transition duration-300 hover:scale-105"
             :style="{ backgroundImage: `url(${char.image})` }"
             @click="activeCardPart2 = activeCardPart2 === index ? null : index"
           ></div>
@@ -221,7 +222,7 @@
     <br />
 
     <!-- Game Features Section -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8">
+    <div class="container py-8">
       <div>
         <img src="/Bilder/features.png" alt="Game Features" width="300" />
         <br />
@@ -866,10 +867,7 @@ const showText = ref(false);
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-}
+
 .card-infected {
   width: 400px;
   height: 400px;
@@ -894,9 +892,7 @@ const showText = ref(false);
   background-position: center;
   flex-shrink: 0;
 }
-.text-white {
-  color: white;
-}
+
 .feature-row {
   transition:
     background-color 0.7s ease,

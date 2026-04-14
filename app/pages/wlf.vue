@@ -1,184 +1,112 @@
 <template>
-  <div id="uncharted" class="w-full">
-    <!-- Welcome Section -->
-    <div class="flex flex-col items-center space-y-4">
-      <img src="/Bilder/wlc.to.png" alt="Welcome" width="300" />
-      <img src="/Bilder/uncharted.logo.png" alt="Uncharted 4 Logo" width="400" />
-      <img src="/Bilder/earned.png" alt="Earned" width="900" />
-    </div>
-    <br />
+  <div id="gta" class="w-full container">
+    <div class="max-w-6xl mx-auto px-4 py-10 space-y-16">
+      <!-- Welcome -->
+      <section class="flex flex-col items-center space-y-2">
+        <img src="/Bilder/gta.wlc.png" alt="Welcome" width="450" />
+        <img src="/Bilder/gta.logo.png" alt="GTA Logo" width="650" />
+        <img src="/Bilder/gta.wrd.png" alt="World" width="250" />
+      </section>
 
-    <p class="text-white text-center text-lg mb-6">
-      Legends aren't found—they're chased.<br />
-      Maps crumble, paths vanish, and every step could uncover a secret lost to time.<br />
-      Old bonds are tested, new dangers awaken, and the world waits for those willing to risk
-      everything.<br />
-      Adventure calls. Will you answer?
-    </p>
+      <!-- Game Introduction -->
+      <section>
+        <p class="text-white text-center text-lg mb-6">
+          In the heart of a city where everything is for sale, the stakes are high, and nothing
+          comes easy.<br />
+          The streets pulse with danger, wealth, and ambition, where every corner hides a new
+          opportunity—or a deadly trap.<br />
+          Old loyalties are tested, and new enemies rise from the shadows, ready to seize
+          control.<br />
+          In a world where the line between right and wrong is blurred, every decision counts, and
+          every action could be your last.<br />
+          The city never sleeps, and neither do the risks. Money, power, and survival are at your
+          fingertips—if you're bold enough to take them.<br />
+          The game is on.
+        </p>
+      </section>
 
-    <br />
-
-    <!-- Part 1 Content -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-12">
+      <!-- Win -->
       <div class="flex justify-center">
-        <img src="/Bilder/p01.png" alt="The Last of Us - Part I" width="700" />
+        <img src="/Bilder/gta.left.png" alt="Win" width="900" />
       </div>
 
-      <p class="text-white mt-4">Game Story</p>
-      <br />
+      <section>
+        <p class="text-white text-center text-lg mb-6">
+          But in a city like Los Santos, it's not just the streets that hold secrets—its residents
+          do too.<br />
+          Meet the faces that shape the chaos of this world: A washed-up bank robber looking for one
+          last score, a volatile former gangster trying to keep a low profile, and a young,
+          ambitious hustler caught between loyalty and greed.<br />
+          Each one hides a past they'd rather forget, and a future they can't escape.<br />
+          <br />
+          In a place where trust is a commodity—and betrayal is often the price—you'll have to
+          decide who's really on your side. As the city's underbelly stirs with danger, alliances
+          will shift, and the shadows will reveal more than you ever bargained for. In Los Santos,
+          survival isn't guaranteed... but power? That's something you can take, if you're willing
+          to risk everything.
+        </p>
+      </section>
 
-      <!-- Part 1 Characters Banner -->
-      <img
-        src="/Bilder/character1.png"
-        alt="Characters - Part I"
-        width="500"
-        class="mx-auto mt-6"
-      />
-      <br />
+      <section class="space-y-8 mt-20">
+        <div class="flex justify-center gap-20">
+          <img class="hover:glow-scale" src="/Bilder/gta.lo.png" alt="GTA" width="600" />
+          <img class="hover:glow-scale" src="/Bilder/gta.on.png" alt="GTA" width="400" />
+        </div>
 
-      <!-- Active Card for Part 1 -->
-      <div
-        v-if="activeCardPart1 !== null"
-        class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
-      >
+        <!-- Michael -->
+        <img
+          src="/Bilder/m.gta.png"
+          alt="Characters - Michael De Santa"
+          width="300"
+          class="mx-auto mt-6"
+        />
+
         <div
-          class="card-large"
-          :style="{ backgroundImage: `url(${charactersPart1[activeCardPart1].image})` }"
-        ></div>
-        <div class="text-white text-base md:text-lg flex-1 min-w-0">
-          <h3 class="text-xl font-bold mb-2">{{ charactersPart1[activeCardPart1].name }}</h3>
-          <p>{{ charactersPart1[activeCardPart1].description }}</p>
-        </div>
-      </div>
-
-      <!-- Part 1 Character Cards in Grouped Rows -->
-      <div class="flex flex-wrap gap-6 justify-center">
-        <template v-for="(char, index) in charactersPart1" :key="index">
-          <div class="text-center">
-            <div
-              class="card"
-              :style="{ backgroundImage: `url(${char.image})` }"
-              @click="activeCardPart1 = activeCardPart1 === index ? null : index"
-            ></div>
-            <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
-          </div>
-        </template>
-      </div>
-    </div>
-
-    <br />
-    <br />
-
-    <!-- Part 2 Content -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8 space-y-2">
-      <div class="flex justify-center">
-        <img src="/Bilder/p02.png" alt="The Last of Us - Part II" width="700" />
-      </div>
-      <img src="/Bilder/story2.png" alt="The Last of Us - Part II" width="600" class="mx-auto" />
-      <br />
-
-      <p class="text-white mt-4">Game Story II</p>
-      <br />
-      <br />
-
-      <!-- Part 2 Characters Banner -->
-      <img
-        src="/Bilder/character2.png"
-        alt="Characters - Part II"
-        width="500"
-        class="mx-auto mt-6"
-      />
-      <br />
-
-      <!-- Active Card for Part 2 -->
-      <div
-        v-if="activeCardPart2 !== null"
-        class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
-      >
-        <div
-          class="card-large"
-          :style="{ backgroundImage: `url(${charactersPart2[activeCardPart2].image})` }"
-        ></div>
-        <div class="text-white text-base md:text-lg flex-1 min-w-0">
-          <h3 class="text-xl font-bold mb-2">{{ charactersPart2[activeCardPart2].name }}</h3>
-          <p>{{ charactersPart2[activeCardPart2].description }}</p>
-        </div>
-      </div>
-
-      <!-- Part 2 Character Cards -->
-      <div class="flex flex-wrap gap-6 justify-center">
-        <div v-for="(char, index) in charactersPart2" :key="index" class="text-center">
-          <div
-            class="card"
-            :style="{ backgroundImage: `url(${char.image})` }"
-            @click="activeCardPart2 = activeCardPart2 === index ? null : index"
-          ></div>
-          <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
-        </div>
-      </div>
-    </div>
-
-    <br />
-
-    <!-- Infected Section -->
-    <div class="mt-12">
-      <div class="flex flex-col justify-center items-center">
-        <img src="/Bilder/human.png" alt="The Infected" width="600" class="shrink-0" />
-      </div>
-      <div class="flex justify-center">
-        <img src="/Bilder/infecteds0.png" alt="Infecteds 0" width="300" />
-      </div>
-      <img src="/Bilder/infecteds1.png" alt="Infecteds 1" width="900" class="mx-auto" />
-      <br />
-      <br />
-      <br />
-
-      <!-- Active Infected Card -->
-      <div
-        v-if="activeInfected !== null"
-        class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
-      >
-        <div
-          class="card-large"
-          :style="{ backgroundImage: `url(${infected[activeInfected].image})` }"
-        ></div>
-        <div class="text-white text-base md:text-lg flex-1 min-w-0">
-          <h3 class="text-xl font-bold mb-2">{{ infected[activeInfected].name }}</h3>
-          <p>{{ infected[activeInfected].description }}</p>
-        </div>
-      </div>
-
-      <!-- Infected Cards -->
-      <div class="flex flex-wrap gap-6 justify-center">
-        <div v-for="(inf, index) in infected" :key="index" class="text-center">
-          <div
-            class="card-infected"
-            :style="{ backgroundImage: `url(${inf.image})` }"
-            @click="activeInfected = activeInfected === index ? null : index"
-          ></div>
-          <p class="mt-2 font-semibold text-white">{{ inf.name }}</p>
-        </div>
-      </div>
-    </div>
-    <br />
-
-    <!-- Game Features Section -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8">
-      <div>
-        <img src="/Bilder/features.png" alt="Game Features" width="300" />
-        <br />
-      </div>
-      <div class="space-y-4">
-        <div
-          v-for="(feature, index) in features"
-          :key="index"
-          class="feature-row p-4 text-white"
-          @click="toggleFeature(index)"
+          v-if="activeCardPart1 !== null"
+          class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
         >
-          <p class="font-bold text-lg">{{ feature.title }}</p>
-          <p v-if="activeFeatures[index]" class="mt-1">{{ feature.description }}</p>
+          <div
+            class="card-large"
+            :style="{ backgroundImage: `url(${gtacharacters[activeCardPart1].image})` }"
+          ></div>
+          <div class="text-white text-base md:text-lg flex-1 min-w-0">
+            <h3 class="text-xl font-bold mb-2">{{ gtacharacters[activeCardPart1].name }}</h3>
+            <p>{{ gtacharacters[activeCardPart1].description }}</p>
+          </div>
         </div>
-      </div>
+
+        <!-- Character Michael -->
+        <div class="flex flex-wrap gap-6 justify-center">
+          <template v-for="(char, index) in gtacharacters" :key="index">
+            <div class="text-center">
+              <div
+                class="card transition duration-300 hover:scale-105"
+                :style="{ backgroundImage: `url(${char.image})` }"
+                @click="activeCardPart1 = activeCardPart1 === index ? null : index"
+              ></div>
+              <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <!-- Game Features -->
+      <section class="space-y-4">
+        <div class="text-center">
+          <img src="/Bilder/gta.f.png" alt="Game Features" width="400" />
+        </div>
+        <div class="space-y-4">
+          <div
+            v-for="(feature, index) in features"
+            :key="index"
+            class="feature-row p-4 text-white"
+            @click="toggleFeature(index)"
+          >
+            <p class="font-bold text-lg">{{ feature.title }}</p>
+            <p v-if="activeFeatures[index]" class="mt-1">{{ feature.description }}</p>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -186,40 +114,50 @@
 <script setup>
 import { ref } from 'vue';
 
-const charactersPart1 = [
+//The 3 Main Characters
+const gtacharacters = [
   {
-    name: 'Joel',
-    image: '/Bilder/joel2.webp',
-    description: ``,
+    name: 'Michael',
+    image: '/Bilder/michael.webp',
+    description:
+      'Michael De Santa is a former bank robber who is now living a life in witness protection after testifying against his former criminal associates. The high-end house, luxury cars, and a seemingly perfect family life were supposed to be his escape. But the quiet life is far from what he expected. Haunted by his past, Michael is torn between the family he’s trying to rebuild and the criminal world he can never fully leave behind. The thrill of the heist calls him back, but will he make one final score, or will he risk everything to break free once and for all?',
+  },
+  {
+    name: 'Franklin',
+    image: '/Bilder/frankie.webp',
+    description:
+      "Franklin Clinton is a young and ambitious hustler, determined to escape the grind of life in the streets of Los Santos. Raised in the rough neighborhoods, he’s always dreamed of something bigger, but every step toward success seems to come with a price. Franklin is caught between his loyalty to his roots and the lure of a life filled with wealth, power, and opportunity. With a sharp mind and a willingness to take risks, he’s willing to do whatever it takes to rise above his circumstances—but will he stay true to himself, or will he get lost in the city's endless pursuit of money and status?",
+  },
+  {
+    name: 'Trevor',
+    image: '/Bilder/trev.jpg',
+    description:
+      'Trevor Philips is a force of nature—unpredictable, volatile, and dangerous. A former military man turned career criminal, Trevor is a man driven by chaos, craving the adrenaline of violence and lawlessness. He thrives in the desert wastes outside Los Santos, where he runs his own criminal empire with no rules, no boundaries, and no regard for the consequences. His loyalty is as wild as his temper, and his thirst for destruction knows no limits. Trevor’s unpredictable nature makes him both a formidable ally and a terrifying enemy, but in a city as corrupt as Los Santos, only the truly insane can survive.',
   },
 ];
 
 const activeCardPart1 = ref(null);
 
-const charactersPart2 = [
-  {
-    name: 'Joel',
-    image: '/Bilder/joel0.webp',
-    description: ``,
-  },
-];
-
-const activeCardPart2 = ref(null);
-
-const infected = [
-  {
-    name: 'Runner',
-    image: '/Bilder/runner.webp',
-    description: '',
-  },
-];
-
-const activeInfected = ref(null);
-
 const features = [
   {
-    title: '🧟 Stealth',
-    description: '',
+    title: '🚗 Open World',
+    description:
+      'Explore the vast, immersive world of GTA, from the bustling city streets of Los Santos to the wild countryside. Drive, fly, and explore at your own pace.',
+  },
+  {
+    title: '🏙️ Dynamic Storytelling',
+    description:
+      'Engage in the dynamic and ever-evolving story of GTA, with deep character arcs, intense missions, and plot twists that keep you on the edge of your seat.',
+  },
+  {
+    title: '💥 Crime and Chaos',
+    description:
+      'GTA allows players to dive deep into the criminal underworld. Rob banks, steal cars, and create chaos as you rise to the top of the criminal empire.',
+  },
+  {
+    title: '🔫 Combat and Action',
+    description:
+      'Fight against enemies using a variety of weapons. Whether you prefer close combat, long-range shooting, or using explosives, GTA gives you all the tools you need.',
   },
 ];
 
@@ -228,65 +166,4 @@ const activeFeatures = ref(features.map(() => false));
 function toggleFeature(index) {
   activeFeatures.value[index] = !activeFeatures.value[index];
 }
-
-const showText = ref(false);
 </script>
-
-<style scoped>
-.card {
-  width: 250px;
-  height: 350px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-}
-.card-infected {
-  width: 400px;
-  height: 400px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: top center;
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.card-infected:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-}
-
-.card-large {
-  width: 250px;
-  height: 400px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
-}
-.text-white {
-  color: white;
-}
-.feature-row {
-  transition:
-    background-color 0.7s ease,
-    transform 0.4s ease;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 1px;
-}
-
-.feature-row:hover {
-  background-color: rgba(223, 35, 35, 0.247);
-  box-shadow: 0 0 12px #ff6347;
-  transform: scale(1.1);
-}
-</style>

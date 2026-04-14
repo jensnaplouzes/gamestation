@@ -1,6 +1,6 @@
 <template>
   <div id="mafia" class="w-full">
-    <div class="w-full max-w-[90%] mx-auto">
+    <div class="container">
       <br />
       <div class="flex flex-col justify-center items-center gap-2">
         <div class="flex items-center">
@@ -28,6 +28,7 @@
         <br />
         <br />
 
+        <!-- Active Card -->
         <div
           v-if="activeCard !== null"
           class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
@@ -41,24 +42,22 @@
           </div>
         </div>
 
-        <!-- Part 1 Character Cards in Grouped Rows -->
+        <!-- Mafia Seasons Cards -->
         <div class="flex flex-wrap justify-center gap-6 mt-8">
           <div v-for="(char, index) in mafiaSeasons" :key="index" class="text-center">
-            <div class="text-center">
-              <NuxtLink v-if="index === 0" to="/mafia1">
-                <div class="card" :style="{ backgroundImage: `url(${char.image})` }"></div>
-                <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
+            <div v-if="index === 0">
+              <NuxtLink to="/mafia1">
+                <Card :name="char.name" :image="char.image" />
               </NuxtLink>
-
-              <div v-else>
-                <div
-                  class="card"
-                  :style="{ backgroundImage: `url(${char.image})` }"
-                  @click="activeCard = activeCard === index ? null : index"
-                ></div>
-                <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
-              </div>
             </div>
+            <div v-else>
+              <Card
+                :name="char.name"
+                :image="char.image"
+                @click="activeCard = activeCard === index ? null : index"
+              />
+            </div>
+            <p class="mt-2 font-semibold text-white">{{ char.name }}</p>
           </div>
         </div>
       </div>
@@ -69,6 +68,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import Card from '@/components/Card.vue'; // Import the Card component
 
 const mafiaSeasons = [
   {
@@ -92,21 +92,6 @@ const activeCard = ref(null);
 </script>
 
 <style>
-.card {
-  width: 300px;
-  height: 400px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-}
 .card-large {
   width: 250px;
   height: 400px;

@@ -1,188 +1,171 @@
 <template>
-  <div id="hbo" class="w-full">
-    <!-- الحاوية الرئيسية لصفحة HBO -->
-    <div class="w-full max-w-[90%] mx-auto p-4 sm:p-8">
-      <!-- حاوية بعرض محدود + محاذاة للوسط + حشوة -->
+  <div id="spiderman" class="w-full">
+    <div class="container">
+      <img src="/Bilder/spid.wlc.png" alt="Peter Parker" width="600" class="mx-auto mt-6" />
       <div class="flex justify-center">
-        <!-- محاذاة الصورة للوسط -->
-        <img src="/Bilder/hbo.logo.png" alt="HBO" width="500" />
-        <!-- شعار HBO -->
+        <img src="/Bilder/spid.logo.png" alt="Spider-Man" width="500" />
       </div>
       <br />
-      <!-- مسافة فارغة -->
-      <h3 class="text-3xl mb-2 font-bold">
-        From game to screen — a story reborn with even more heart...
-        <!-- العنوان الفرعي -->
-      </h3>
-      <p class="text-base leading-relaxed">
-        <!-- فقرة نصية -->
-        When HBO said they were turning
-        <em><strong>The Last of Us</strong></em> into a TV show, gamers everywhere held their
-        breath.
-        <!-- تقديم المسلسل -->
-        This game is legendary — epic story, unforgettable characters, and a world that's both
-        brutal and beautiful.
-        <!-- وصف اللعبة -->
-        Could a show really do it justice? Spoiler: It totally did.<br /><br />
-        <!-- تعليق على التحويل -->
 
-        <strong class="text-2xl">Faithful to the Game — But Leveling Up</strong><br />
-        <!-- عنوان فرعي -->
-        Craig Mazin (<em>Chernobyl</em>) teamed up with Neil Druckmann, the game's creator, to bring
-        this world to life.
-        <!-- معلومات عن الإنتاج -->
-        They nailed the story but added cool new scenes and deeper details that make the world even
-        richer.
-        <!-- مميزات إضافية للمسلسل -->
-        Whether you're a die-hard fan or new to the story, you're hooked from the moment the
-        infection breaks out and Joel meets Ellie — a duo you'll be rooting for hard.<br /><br />
-        <!-- تجربة المشاهدة -->
+      <section>
+        <p class="text-white text-center text-lg mb-6">
+          Spider-Man Remastered is a visually stunning and enhanced version of the 2018 hit Marvel's
+          Spider-Man, developed by Insomniac Games and released for PlayStation 5.<br />
+          This remastered edition brings new life to the critically acclaimed open-world superhero
+          adventure, offering better graphics, smoother performance, and additional content.<br />
+          <br />
+          The game follows Peter Parker, a 23-year-old Spider-Man, as he juggles his personal life
+          and his responsibilities as a superhero in New York City.<br />
+          <br />
+          Players take control of Peter as he faces off against iconic villains like Kingpin,
+          Vulture, and the enigmatic Mister Negative, while also navigating complex relationships
+          with characters such as Mary Jane Watson and Aunt May.<br />
+          One of the major highlights of Spider-Man Remastered is its impressive visual overhaul.
+          <br />
+          The game runs at a solid 60 frames per second on the PlayStation 5 and features
+          ray-tracing technology for ultra-realistic lighting and reflections.<br />
+          The character models have been updated, with Peter Parker's face being re-cast, making him
+          look more expressive and younger.<br />
+          The updated cityscape is more detailed than ever, with dynamic weather effects and
+          breathtaking views of Manhattan's skyline. The gameplay remains as engaging as ever, with
+          fluid combat that mixes acrobatic maneuvers with web-swinging around the city.
+          <br />
+          The remaster also includes the The City That Never Sleeps DLC, which introduces new story
+          missions, challenges, and additional villains to the game. Players can explore new parts
+          of the city, unlock new suits, and dive deeper into Spider-Man's world.<br />
+          <br />
+          In terms of performance, Spider-Man Remastered takes full advantage of the PS5's
+          capabilities.<br />
+          Load times are near-instantaneous, and the haptic feedback and adaptive triggers of the
+          DualSense controller further immerse players into the experience, making each swing
+          through the city feel even more realistic.<br />
+          <br />
+          For those who missed out on the original or are revisiting this epic adventure, Spider-Man
+          Remastered offers the perfect opportunity to swing through New York City once again—better
+          than ever before.
+        </p>
+      </section>
 
-        <strong class="text-2xl">Casting That Hits the Mark</strong><br />
-        <!-- عنوان فرعي عن الكاست -->
-        Pedro Pascal as Joel? Bella Ramsey as Ellie? Some fans were skeptical at first, but these
-        two crushed it.
-        <!-- الكاست -->
-        Pascal brings all the gritty, tough-love vibes, while Ramsey nails Ellie's smart mouth and
-        fierce heart.
-        <!-- أداء الممثلين -->
-        Their slow-building bond is pure gold. And don't sleep on the episode about Bill and Frank —
-        it's emotional AF and shows this world isn't just about zombies, but about real, messy human
-        connections.<br /><br />
-        <!-- تفاصيل الأحداث -->
-
-        <strong class="text-2xl">Expanding the Universe</strong><br />
-        <!-- عنوان فرعي -->
-        The show doesn't just stick to the game's map — it adds new characters and stories that
-        explain what went down when the world fell apart.
-        <!-- توسع القصة -->
-        The infected are scary, sure, but the real danger? Other people losing it.
-        <!-- وصف المخاطر -->
-        It's a world full of tension, surprises, and moments that hit right in the feels.<br /><br />
-        <!-- جو العالم -->
-
-        <strong class="text-2xl">More Than Just Survival</strong><br />
-        <!-- عنوان فرعي -->
-        At its core, <em>The Last of Us</em> is about love, loss, and the crazy lengths people go to
-        protect each other.
-        <!-- محور القصة -->
-        Joel's on a path to find hope again, while Ellie learns what it means to trust someone.
-        <!-- رحلة الشخصيات -->
-        The Season 1 ending? It's heartbreaking and thought-provoking — just like the game's, making
-        you question what you'd do in their shoes.<br /><br />
-        <!-- نهاية الموسم الأول -->
-
-        <strong class="text-2xl">Big Hit and What's Next</strong><br />
-        <!-- عنوان فرعي -->
-        The show blew up — critics and fans gave it mad props, and tons of new players jumped into
-        the game after watching.
-        <!-- نجاح المسلسل -->
-        Season 2 is coming, and it's diving into the darker, heavier story of the sequel.
-        <!-- الموسم الثاني -->
-        Fans are hyped (and nervous) to see how it all plays out.<br /><br />
-        <!-- توقعات الجمهور -->
-
-        <strong class="text-2xl">Wrap Up</strong><br />
-        <!-- عنوان فرعي للختام -->
-        HBO's <em>The Last of Us</em> proves games aren't just for playing — they're stories waiting
-        to be told in new ways.
-        <!-- خاتمة -->
-        With respect, heart, and some serious talent, this show brought Joel and Ellie's journey to
-        a whole new level.
-        <!-- تقييم المسلسل -->
-        In a world full of chaos, it reminds us why love and connection are the ultimate power-ups.
-        <!-- رسالة المسلسل -->
-      </p>
-      <br />
-      <!-- مسافة فارغة -->
-      <div class="mt-10">
-        <!-- مسافة من الأعلى -->
-        <div class="flex justify-center items-center gap-16 mb-6 flex-wrap text-center">
-          <h3 class="text-5xl font-bold">Episode Overview 🎬</h3>
-          <!-- عنوان القسم -->
-          <img src="/Bilder/hbo.webp" alt="HBO" class="w-[200px]" />
-          <!-- صورة ثانوية -->
-        </div>
-
-        <div class="flex justify-center gap-4 mb-6">
-          <!-- أزرار اختيار الموسم -->
-          <button
-            class="button-primary"
-            @click="selectedSeason = 1"
-            :class="{ 'opacity-70': selectedSeason !== 1 }"
-          >
-            Season 1
-            <!-- زر الموسم الأول -->
-          </button>
-
-          <button
-            class="button-primary"
-            @click="selectedSeason = 2"
-            :class="{ 'opacity-70': selectedSeason !== 2 }"
-          >
-            Season 2
-            <!-- زر الموسم الثاني -->
-          </button>
-        </div>
-
-        <ul class="w-full px-4 bf-black bg-opacity-60 rounded">
-          <!-- قائمة الحلقات -->
-          <li
-            v-for="ep in filteredEpisodes"
-            :key="ep.id"
-            class="flex flex-col md:flex-row gap-8 bg-black/60 p-4 shadow rounded mb-6 w-full"
-          >
-            <img
-              v-if="ep.image"
-              :src="ep.image.medium"
-              alt="Episodenbild"
-              class="w-full md:w-48 rounded"
-            />
-            <div class="flex-1">
-              <h4 class="text-xl font-semibold text-white">
-                {{ ep.season }}x{{ ep.number }} - {{ ep.name }}
-              </h4>
-              <p class="text-sm text-white">{{ ep.airdate }} ( Runtime: {{ ep.runtime }} Min)</p>
-              <p class="mt-1 text-white">
-                {{ ep.summary ? ep.summary.replace(/<[^>]*>/g, '') : 'keine Beschreibung' }}
-              </p>
+      <section class="space-y-8 mt-20">
+        <!-- Character Selection (First Row) -->
+        <div class="flex flex-wrap gap-10 justify-center mb-8">
+          <template v-for="(char, index) in gtacharacters.slice(0, 3)" :key="index">
+            <div class="text-center">
+              <Card
+                :name="char.name"
+                :image="char.image"
+                :onClick="() => (activeCardPart1 = activeCardPart1 === index ? null : index)"
+              />
             </div>
-          </li>
-        </ul>
-      </div>
+          </template>
+        </div>
+
+        <!-- Character Selection (Second Row) -->
+        <div class="flex flex-wrap gap-10 justify-center">
+          <template v-for="(char, index) in gtacharacters.slice(3, 6)" :key="index">
+            <div class="text-center">
+              <Card
+                :name="char.name"
+                :image="char.image"
+                :onClick="() => (activeCardPart1 = activeCardPart1 === index ? null : index)"
+              />
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <!-- Game Features Section -->
+      <section class="space-y-4 gap-8 mt-16">
+        <div class="text-center">
+          <img src="/Bilder/spid.f.png" alt="Game Features" width="400" />
+        </div>
+        <div class="space-y-4">
+          <div
+            v-for="(feature, index) in features"
+            :key="index"
+            class="feature-row p-4 text-white"
+            @click="toggleFeature(index)"
+          >
+            <p class="font-bold text-lg">{{ feature.title }}</p>
+            <p v-if="activeFeatures[index]" class="mt-1">{{ feature.description }}</p>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref, computed } from 'vue';
+<script setup>
+import { ref } from 'vue';
+import Card from '@/components/Card.vue';
 
-type Episode = {
-  id: number;
-  name: string;
-  season: number;
-  number: number;
-  airdate: string;
-  runtime: number;
-  image?: { medium: string };
-  summary?: string;
-};
+const gtacharacters = [
+  {
+    name: 'Peter Parker',
+    image: '/Bilder/pet.webp',
+    description:
+      'Peter Parker, ein begabter Fotograf und Student, wird zu Spider-Man, als er von einer radioaktiven Spinne gebissen wird.',
+  },
+  {
+    name: 'Harry Osborn',
+    image: '/Bilder/harry.webp',
+    description:
+      'Harry Osborn ist der beste Freund von Peter Parker und ein wichtiger Charakter in der Spider-Man-Geschichte.',
+  },
+  {
+    name: 'Felicia',
+    image: '/Bilder/felicia.webp',
+    description:
+      'Felicia Hardy, auch bekannt als Black Cat, ist eine Diebin und gelegentliche Verbündete von Spider-Man.',
+  },
+  {
+    name: 'Martin Li',
+    image: '/Bilder/martin.webp',
+    description:
+      'Martin Li ist ein charismatischer Führer und Gegner von Spider-Man, auch bekannt als Mister Negative.',
+  },
+  {
+    name: 'Miles Morales',
+    image: '/Bilder/miles.webp',
+    description:
+      'Miles Morales ist der zweite Spider-Man im Marvel-Universum, ein jugendlicher Held, der mit Spider-Man verbündet ist.',
+  },
+  {
+    name: 'Mary Jane Watson',
+    image: '/Bilder/maryjane.webp',
+    description:
+      'Mary Jane Watson ist eine wichtige Figur im Leben von Peter Parker und seine große Liebe.',
+  },
+];
 
-type ApiResponse = {
-  _embedded?: { episodes: Episode[] };
-};
+const activeCardPart1 = ref(null);
 
-const { data: apiData, error } = await useFetch<ApiResponse>(
-  'https://api.tvmaze.com/singlesearch/shows?q=the%20last%20of%20us&embed=episodes'
-);
+const features = [
+  {
+    title: '🕷️ Superkräfte',
+    description:
+      'Spider-Man besitzt übermenschliche Kräfte wie erhöhte Agilität, Reflexe und die Fähigkeit, Wände zu erklimmen.',
+  },
+  {
+    title: '🌆 Offene Welt',
+    description:
+      'Schwimme durch die Straßen von New York und erlebe die offene Welt, in der du deine Abenteuer erleben kannst.',
+  },
+  {
+    title: '🎮 Kampf- und Bewegungssystem',
+    description:
+      'Verwende das flexible und schnelle Kampf- und Bewegungssystem, um Feinde zu besiegen und die Stadt zu beschützen.',
+  },
+  {
+    title: '💥 Venom vs Spider-Man',
+    description:
+      'Spüre den Nervenkitzel, als Spider-Man gegen Venom kämpft, eine der gefährlichsten Bedrohungen für die Stadt.',
+  },
+];
 
-const selectedSeason = ref(1);
+const activeFeatures = ref(features.map(() => false));
 
-const episodes = computed(() => {
-  return apiData.value?._embedded?.episodes || [];
-});
-
-const filteredEpisodes = computed(() =>
-  episodes.value.filter((ep) => ep.season === selectedSeason.value)
-);
+function toggleFeature(index) {
+  activeFeatures.value[index] = !activeFeatures.value[index];
+}
 </script>

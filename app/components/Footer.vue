@@ -6,6 +6,6 @@
 
 <style scoped>
 footer {
-  margin-top: auto; /* يدفع الفوتر لتحت الصفحة */
+  margin-top: auto;
 }
 </style>

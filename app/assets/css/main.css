@@ -2,16 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .container {
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+}
+
+.hover\:glow-scale {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hover\:glow-scale:hover {
+  transform: scale(1.1);
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0; /* إزالة الهوامش الافتراضية */
-  padding: 0; /* إزالة الحشو الافتراضي */
-  background-color: #1a1a1a; /* خلفية أساسية داكنة */
-  color: #f0f0f0; /* لون النص */
-  background-size: cover; /* تكبير الخلفية لتغطي كل الصفحة */
-  background-position: center; /* تمركز الخلفية */
-  background-repeat: no-repeat; /* عدم تكرار الخلفية */
-  background-attachment: fixed; /* تثبيت الخلفية عند التمرير */
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body.index {
@@ -27,10 +44,10 @@ body.index::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.1); /* لون نصف شفاف فوق الخلفية */
-  z-index: -1; /* خلفية خلف كل العناصر */
-  pointer-events: none; /* لا تتفاعل مع المؤشر */
-  opacity: 1; /* شفافية الخلفية */
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
 }
 
 body.thelastofus {
@@ -155,7 +172,7 @@ body.uncharted::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/Bilder/uncharted.jpg');
+  background-image: url('/Bilder/uncharted...jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -174,7 +191,7 @@ body.wlf::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/Bilder/wolves.jpg');
+  background-image: url('/Bilder/gta.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,7 +229,7 @@ body.kontakt::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/Bilder/kontakte.webp');
+  background-image: url('/Bilder/ww2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -231,7 +248,7 @@ body.hbo::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/Bilder/hbo.infected.webp');
+  background-image: url('/Bilder/spiderman.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -358,9 +375,7 @@ main {
 }
 
 .feature-row:hover {
-  background-color: rgba(223, 35, 35, 0.247); /* لون عند المرور */
-  box-shadow: 0 0 12px #ff6347; /* ظل عند المرور */
-  transform: scale(1.1); /* تكبير خفيف عند المرور */
+  transform: scale(1.1);
 }
 
 .faces {
