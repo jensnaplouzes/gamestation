@@ -11,10 +11,10 @@
         <NuxtLink to="/godofwar">God Of War</NuxtLink>
         <NuxtLink to="/mafia">Mafia</NuxtLink>
         <NuxtLink to="/uncharted">Uncharted</NuxtLink>
-        <NuxtLink to="/wlf">Grand Theft Auto</NuxtLink>
-        <NuxtLink to="/scars">Tomb Raider</NuxtLink>
-        <NuxtLink to="/hbo">Spider-Man </NuxtLink>
-        <NuxtLink to="/kontakt">Call Of Duty</NuxtLink>
+        <NuxtLink to="/gta">Grand Theft Auto V</NuxtLink>
+        <NuxtLink to="/tombraider">Tomb Raider</NuxtLink>
+        <NuxtLink to="/spiderman">Spider-Man </NuxtLink>
+        <NuxtLink to="/callofduty">Call Of Duty WWII</NuxtLink>
       </nav>
     </div>
   </header>

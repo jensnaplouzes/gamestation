@@ -134,7 +134,7 @@ body.mafia1::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/Bilder/mafia1.bg.jpg');
+  background-image: url('/Bilder/mafia1.bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -144,23 +144,40 @@ body.mafia1::before {
   opacity: 1;
 }
 
-body.fireflies {
+body.mafia2 {
   position: relative;
   z-index: 0;
 }
-
-body.fireflies::before {
+body.mafia2::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/Bilder/fireflies.png');
+  background-image: url('/Bilder/mafia2bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: -1;
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 1;
+}
+
+body.mafia3 {
+  position: relative;
+  z-index: 0;
+}
+body.mafia3::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/Bilder/mafia3bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
 }
 
 body.uncharted {
@@ -182,12 +199,12 @@ body.uncharted::before {
   opacity: 0.9;
 }
 
-body.wlf {
+body.gta {
   position: relative;
   z-index: 0;
 }
 
-body.wlf::before {
+body.gta::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -201,16 +218,16 @@ body.wlf::before {
   opacity: 1;
 }
 
-body.scars {
+body.tombraider {
   position: relative;
   z-index: 0;
 }
 
-body.scars::before {
+body.tombraider::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/Bilder/scars.jpg');
+  background-image: url('/Bilder/tombraider.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -220,12 +237,12 @@ body.scars::before {
   opacity: 1;
 }
 
-body.kontakt {
+body.callofduty {
   position: relative;
   z-index: 0;
 }
 
-body.kontakt::before {
+body.callofduty::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -239,12 +256,12 @@ body.kontakt::before {
   opacity: 1;
 }
 
-body.hbo {
+body.spiderman {
   position: relative;
   z-index: 0;
 }
 
-body.hbo::before {
+body.spiderman::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -329,44 +346,6 @@ main {
   gap: 40px;
 }
 
-.godofwar-section,
-.charaktere-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
-}
-
-.godofwar-section > div,
-.charaktere-section > div {
-  max-width: 70%;
-}
-
-.godofwar-img,
-.charaktere-img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.text-with-sticker {
-  display: flex;
-  align-items: flex-start;
-  gap: 800px;
-}
-
-.text-with-sticker p {
-  flex: 1;
-  margin: 0;
-}
-
-.sticker {
-  width: 170px;
-  height: auto;
-}
-
 .feature-row {
   transition: background-color 0.7s ease;
   cursor: pointer;
@@ -375,19 +354,6 @@ main {
 }
 
 .feature-row:hover {
-  transform: scale(1.1);
-}
-
-.faces {
-  transition: background-color 0.7s ease;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: transform 0.4s ease;
-}
-
-.faces:hover {
-  background-color: rgba(67, 121, 236, 0.247);
-  box-shadow: 0 0 12px #4772ff;
   transform: scale(1.1);
 }
 
@@ -404,4 +370,23 @@ html {
 .button-primary:focus-visible,
 .button-primary:focus {
   @apply bg-[rgba(54,54,54,0.247)] shadow-[0_0_12px_#4772ff] scale-110;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .character-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .character-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

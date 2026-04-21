@@ -18,7 +18,7 @@
       Adventure is calling. Will you dare to answer?
     </p>
 
-    <!-- Part 1 Content -->
+    <!-- Content -->
     <div class="container py-8">
       <div class="flex flex-col items-center">
         <img src="/Bilder/gold.png" alt="Gold" width="700" />
@@ -49,50 +49,47 @@
         journey mattered—not for what he found, but for who he became along the way.
       </p>
 
-      <!-- Part 1 Characters Banner -->
-      <img src="/Bilder/odds.png" alt="Uncharted 4 Characters" width="500" class="mx-auto mt-6" />
+      <!-- Characters -->
+      <img src="/Bilder/odds.png" alt="Uncharted Characters" width="500" class="mx-auto mt-6" />
 
-      <!-- Active Card for Part 1 -->
-      <div
-        v-if="activeCardPart1 !== null"
-        class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4"
-      >
+      <!-- Active Card -->
+      <div v-if="activeCard !== null" class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4">
         <Card
-          :image="charactersPart1[activeCardPart1].image"
-          :name="charactersPart1[activeCardPart1].name"
-          :onClick="
-            () => {
-              activeCardPart1 = activeCardPart1 === index ? null : index;
-            }
-          "
+          :image="characters[activeCard].image"
+          :name="characters[activeCard].name"
+          @click="activeCard = null"
         />
+
         <div class="text-white text-base md:text-lg flex-1 min-w-0">
-          <h3 class="text-xl font-bold mb-2">{{ charactersPart1[activeCardPart1].name }}</h3>
-          <p>{{ charactersPart1[activeCardPart1].description }}</p>
+          <h3 class="text-xl font-bold mb-2">
+            {{ characters[activeCard].name }}
+          </h3>
+          <p>{{ characters[activeCard].description }}</p>
         </div>
       </div>
 
-      <!-- Part 1 Character Cards in Grouped Rows -->
+      <!-- Cards -->
       <div class="flex flex-wrap gap-6 justify-center">
-        <template v-for="(char, index) in charactersPart1" :key="index">
+        <div v-for="(char, index) in characters" :key="index" class="text-center">
           <Card
             :image="char.image"
             :name="char.name"
-            :onClick="
-              () => {
-                activeCardPart1 = activeCardPart1 === index ? null : index;
-              }
-            "
+            @click="activeCard = activeCard === index ? null : index"
           />
-        </template>
+          <!-- Name unter Card (weil du es aus Card.vue entfernt hast) -->
+          <p class="mt-2 font-semibold text-white">
+            {{ char.name }}
+          </p>
+        </div>
       </div>
     </div>
 
-    <!-- Game Features Section -->
+    <!-- Features -->
     <div class="container py-8">
       <div>
         <img src="/Bilder/features.png" alt="Game Features" width="300" />
       </div>
+
       <div class="space-y-4">
         <div
           v-for="(feature, index) in features"
@@ -101,7 +98,9 @@
           @click="toggleFeature(index)"
         >
           <p class="font-bold text-lg">{{ feature.title }}</p>
-          <p v-if="activeFeatures[index]" class="mt-1">{{ feature.description }}</p>
+          <p v-if="activeFeatures[index]" class="mt-1">
+            {{ feature.description }}
+          </p>
         </div>
       </div>
     </div>
@@ -110,9 +109,9 @@
 
 <script setup>
 import { ref } from 'vue';
-import Card from '../components/Card.vue';
+import Card from '@/components/Card.vue';
 
-const charactersPart1 = [
+const characters = [
   {
     name: 'Nathan Drake',
     image: '/Bilder/nathan.webp',
@@ -123,25 +122,25 @@ const charactersPart1 = [
     name: 'Samuel Drake',
     image: '/Bilder/samuel.webp',
     description:
-      'Samuel Drake, Nathan’s older brother, joins him on his quest. His loyalty to Nathan and his daring attitude make him a vital part of the adventure.',
+      "Samuel Drake, Nathan's older brother, joins him on his quest. His loyalty to Nathan and his daring attitude make him a vital part of the adventure.",
   },
   {
     name: 'Rafe Adler',
     image: '/Bilder/rafe.webp',
     description:
-      'Rafe Adler is a wealthy and ambitious treasure hunter. He’s a rival to Nathan, and his pursuit of wealth and glory makes him an unpredictable adversary.',
+      "Rafe Adler is a wealthy and ambitious treasure hunter. He's a rival to Nathan, and his pursuit of wealth and glory makes him an unpredictable adversary.",
   },
   {
     name: 'Elena Fisher',
     image: '/Bilder/elena.webp',
     description:
-      'Elena Fisher is a journalist and Nathan’s love interest. She’s resourceful, courageous, and provides much-needed support to Nathan throughout their perilous journey.',
+      "Elena Fisher is a journalist and Nathan's love interest. She's resourceful, courageous, and provides much-needed support to Nathan throughout their perilous journey.",
   },
   {
     name: 'Victor Sullivan',
     image: '/Bilder/victor.webp',
     description:
-      'Victor “Sully” Sullivan is a veteran treasure hunter and Nathan’s mentor. His quick wit and experience make him an invaluable guide on Nathan’s adventures.',
+      "Victor 'Sully' Sullivan is a veteran treasure hunter and Nathan's mentor. His quick wit and experience make him an invaluable guide on Nathan's adventures.",
   },
   {
     name: 'Nadine Ross',
@@ -151,7 +150,7 @@ const charactersPart1 = [
   },
 ];
 
-const activeCardPart1 = ref(null);
+const activeCard = ref(null);
 
 const features = [
   {
@@ -190,19 +189,9 @@ const features = [
       'Experience a rich, emotionally-driven narrative with memorable characters, cinematic cutscenes, and dramatic plot twists.',
   },
   {
-    title: '🤝 Multiplayer & Co-op',
-    description:
-      'Engage in competitive multiplayer modes and team up with friends for co-op challenges (if applicable).',
-  },
-  {
     title: '💎 Treasure Hunting',
     description:
       'Discover collectibles, hidden treasures, and secret locations to unlock bonuses and lore.',
-  },
-  {
-    title: '⚔️ Dynamic Action Sequences',
-    description:
-      'Participate in thrilling chase sequences, daring escapes, and epic set-pieces full of cinematic flair.',
   },
 ];
 

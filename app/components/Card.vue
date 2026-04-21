@@ -3,9 +3,7 @@
     class="card transition duration-300 hover:scale-105"
     :style="{ backgroundImage: `url(${image})` }"
     @click="onClick"
-  >
-    <p class="mt-2 font-semibold text-white">{{ name }}</p>
-  </div>
+  ></div>
 </template>
 
 <script setup>

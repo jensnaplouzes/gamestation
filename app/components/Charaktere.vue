@@ -1,25 +1,36 @@
 <template>
-  <div class="flex flex-col md:flex-row md:items-start gap-6">
-    <div class="md:w-2/3 space-y-4">
-      <h3 class="text-7xl font-semibold">{{ title }}</h3>
-      <p class="leading-relaxed">
-        <slot />
+  <div v-if="character" class="flex flex-col md:flex-row gap-6 mb-6 items-start mt-4">
+    <div class="card-large" :style="{ backgroundImage: `url(${character.image})` }"></div>
+
+    <div class="text-white text-base md:text-lg flex-1 min-w-0">
+      <h3 class="text-xl font-bold mb-2">
+        {{ character.name }}
+      </h3>
+
+      <p v-if="character.description">
+        {{ character.description }}
       </p>
     </div>
-    <img
-      :src="image"
-      :alt="title"
-      :class="['w-3/4 md:w-1/4 shadow-lg border-b-4 border-b-white', $props.class]"
-    />
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps({
-  title: String,
-  image: String,
-  class: String,
-});
+defineProps<{
+  character: {
+    name: string;
+    image: string;
+    description?: string;
+  };
+}>();
 </script>
 
-<style></style>
+<style scoped>
+.card-large {
+  width: 250px;
+  height: 400px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+</style>
